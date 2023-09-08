@@ -1,0 +1,6 @@
+[submodule "dbcc"]
+	path = dbcc
+	url = https://github.com/howerj/dbcc.git
+[submodule "brunner_can"]
+	path = brunner_can
+	url = git@github.com:tillsc/brunner_can.git
