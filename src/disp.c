@@ -67,12 +67,434 @@ int print_can_0xa10a612_DISP_STEUERUNG_ZUSATZHEIZUNG_PROGRAMM(const can_obj_disp
 	return r;
 }
 
+static int pack_can_0xa10c21d_DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT(can_obj_disp_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0xa10c21d_DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT.DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0xa10c21d_DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0xa10c21d_DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT(can_obj_disp_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0xa10c21d_DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT.DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT = x;
+	o->can_0xa10c21d_DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT_rx = 1;
+	o->can_0xa10c21d_DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0xa10c21d_DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT(const can_obj_disp_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0xa10c21d_DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT.DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0xa10c21d_DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT(can_obj_disp_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0xa10c21d_DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT.DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT = in;
+	return 0;
+}
+
+int print_can_0xa10c21d_DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT(const can_obj_disp_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT = (wire: %.0f)\n", (double)(o->can_0xa10c21d_DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT.DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT)));
+	return r;
+}
+
+static int pack_can_0xa11221e_DISP_STEUERUNG_HK1_DAUERBETRIEB(can_obj_disp_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* DISP_STEUERUNG_HK1_DAUERBETRIEB: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = ((uint16_t)(o->can_0xa11221e_DISP_STEUERUNG_HK1_DAUERBETRIEB.DISP_STEUERUNG_HK1_DAUERBETRIEB)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0xa11221e_DISP_STEUERUNG_HK1_DAUERBETRIEB_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0xa11221e_DISP_STEUERUNG_HK1_DAUERBETRIEB(can_obj_disp_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* DISP_STEUERUNG_HK1_DAUERBETRIEB: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0xa11221e_DISP_STEUERUNG_HK1_DAUERBETRIEB.DISP_STEUERUNG_HK1_DAUERBETRIEB = x;
+	o->can_0xa11221e_DISP_STEUERUNG_HK1_DAUERBETRIEB_rx = 1;
+	o->can_0xa11221e_DISP_STEUERUNG_HK1_DAUERBETRIEB_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0xa11221e_DISP_STEUERUNG_HK1_DAUERBETRIEB(const can_obj_disp_h_t *o, int16_t *out) {
+	assert(o);
+	assert(out);
+	int16_t rval = (int16_t)(o->can_0xa11221e_DISP_STEUERUNG_HK1_DAUERBETRIEB.DISP_STEUERUNG_HK1_DAUERBETRIEB);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0xa11221e_DISP_STEUERUNG_HK1_DAUERBETRIEB(can_obj_disp_h_t *o, int16_t in) {
+	assert(o);
+	o->can_0xa11221e_DISP_STEUERUNG_HK1_DAUERBETRIEB.DISP_STEUERUNG_HK1_DAUERBETRIEB = in;
+	return 0;
+}
+
+int print_can_0xa11221e_DISP_STEUERUNG_HK1_DAUERBETRIEB(const can_obj_disp_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "DISP_STEUERUNG_HK1_DAUERBETRIEB = (wire: %.0f)\n", (double)(o->can_0xa11221e_DISP_STEUERUNG_HK1_DAUERBETRIEB.DISP_STEUERUNG_HK1_DAUERBETRIEB)));
+	return r;
+}
+
+static int pack_can_0xa112224_DISP_STEUERUNG_HK1_WAERMER_KAELTER(can_obj_disp_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* DISP_STEUERUNG_HK1_WAERMER_KAELTER: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0xa112224_DISP_STEUERUNG_HK1_WAERMER_KAELTER.DISP_STEUERUNG_HK1_WAERMER_KAELTER)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0xa112224_DISP_STEUERUNG_HK1_WAERMER_KAELTER_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0xa112224_DISP_STEUERUNG_HK1_WAERMER_KAELTER(can_obj_disp_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* DISP_STEUERUNG_HK1_WAERMER_KAELTER: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0xa112224_DISP_STEUERUNG_HK1_WAERMER_KAELTER.DISP_STEUERUNG_HK1_WAERMER_KAELTER = x;
+	o->can_0xa112224_DISP_STEUERUNG_HK1_WAERMER_KAELTER_rx = 1;
+	o->can_0xa112224_DISP_STEUERUNG_HK1_WAERMER_KAELTER_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0xa112224_DISP_STEUERUNG_HK1_WAERMER_KAELTER(const can_obj_disp_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0xa112224_DISP_STEUERUNG_HK1_WAERMER_KAELTER.DISP_STEUERUNG_HK1_WAERMER_KAELTER);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0xa112224_DISP_STEUERUNG_HK1_WAERMER_KAELTER(can_obj_disp_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0xa112224_DISP_STEUERUNG_HK1_WAERMER_KAELTER.DISP_STEUERUNG_HK1_WAERMER_KAELTER = in;
+	return 0;
+}
+
+int print_can_0xa112224_DISP_STEUERUNG_HK1_WAERMER_KAELTER(const can_obj_disp_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "DISP_STEUERUNG_HK1_WAERMER_KAELTER = (wire: %.0f)\n", (double)(o->can_0xa112224_DISP_STEUERUNG_HK1_WAERMER_KAELTER.DISP_STEUERUNG_HK1_WAERMER_KAELTER)));
+	return r;
+}
+
+static int pack_can_0x1210c219_DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM(can_obj_disp_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = ((uint16_t)(o->can_0x1210c219_DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM.DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1210c219_DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1210c219_DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM(can_obj_disp_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1210c219_DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM.DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM = x;
+	o->can_0x1210c219_DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM_rx = 1;
+	o->can_0x1210c219_DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1210c219_DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM(const can_obj_disp_h_t *o, int16_t *out) {
+	assert(o);
+	assert(out);
+	int16_t rval = (int16_t)(o->can_0x1210c219_DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM.DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1210c219_DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM(can_obj_disp_h_t *o, int16_t in) {
+	assert(o);
+	o->can_0x1210c219_DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM.DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM = in;
+	return 0;
+}
+
+int print_can_0x1210c219_DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM(const can_obj_disp_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM = (wire: %.0f)\n", (double)(o->can_0x1210c219_DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM.DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM)));
+	return r;
+}
+
+static int pack_can_0x12112213_DISP_STEUERUNG_HK1_SOMMERBETRIEB(can_obj_disp_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* DISP_STEUERUNG_HK1_SOMMERBETRIEB: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x12112213_DISP_STEUERUNG_HK1_SOMMERBETRIEB.DISP_STEUERUNG_HK1_SOMMERBETRIEB)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x12112213_DISP_STEUERUNG_HK1_SOMMERBETRIEB_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x12112213_DISP_STEUERUNG_HK1_SOMMERBETRIEB(can_obj_disp_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* DISP_STEUERUNG_HK1_SOMMERBETRIEB: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x12112213_DISP_STEUERUNG_HK1_SOMMERBETRIEB.DISP_STEUERUNG_HK1_SOMMERBETRIEB = x;
+	o->can_0x12112213_DISP_STEUERUNG_HK1_SOMMERBETRIEB_rx = 1;
+	o->can_0x12112213_DISP_STEUERUNG_HK1_SOMMERBETRIEB_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x12112213_DISP_STEUERUNG_HK1_SOMMERBETRIEB(const can_obj_disp_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x12112213_DISP_STEUERUNG_HK1_SOMMERBETRIEB.DISP_STEUERUNG_HK1_SOMMERBETRIEB);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x12112213_DISP_STEUERUNG_HK1_SOMMERBETRIEB(can_obj_disp_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x12112213_DISP_STEUERUNG_HK1_SOMMERBETRIEB.DISP_STEUERUNG_HK1_SOMMERBETRIEB = in;
+	return 0;
+}
+
+int print_can_0x12112213_DISP_STEUERUNG_HK1_SOMMERBETRIEB(const can_obj_disp_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "DISP_STEUERUNG_HK1_SOMMERBETRIEB = (wire: %.0f)\n", (double)(o->can_0x12112213_DISP_STEUERUNG_HK1_SOMMERBETRIEB.DISP_STEUERUNG_HK1_SOMMERBETRIEB)));
+	return r;
+}
+
+static int pack_can_0x1211221f_DISP_STEUERUNG_HK1_ABWESENHEITSZEIT(can_obj_disp_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* DISP_STEUERUNG_HK1_ABWESENHEITSZEIT: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = ((uint16_t)(o->can_0x1211221f_DISP_STEUERUNG_HK1_ABWESENHEITSZEIT.DISP_STEUERUNG_HK1_ABWESENHEITSZEIT)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1211221f_DISP_STEUERUNG_HK1_ABWESENHEITSZEIT_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1211221f_DISP_STEUERUNG_HK1_ABWESENHEITSZEIT(can_obj_disp_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* DISP_STEUERUNG_HK1_ABWESENHEITSZEIT: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1211221f_DISP_STEUERUNG_HK1_ABWESENHEITSZEIT.DISP_STEUERUNG_HK1_ABWESENHEITSZEIT = x;
+	o->can_0x1211221f_DISP_STEUERUNG_HK1_ABWESENHEITSZEIT_rx = 1;
+	o->can_0x1211221f_DISP_STEUERUNG_HK1_ABWESENHEITSZEIT_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1211221f_DISP_STEUERUNG_HK1_ABWESENHEITSZEIT(const can_obj_disp_h_t *o, int16_t *out) {
+	assert(o);
+	assert(out);
+	int16_t rval = (int16_t)(o->can_0x1211221f_DISP_STEUERUNG_HK1_ABWESENHEITSZEIT.DISP_STEUERUNG_HK1_ABWESENHEITSZEIT);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1211221f_DISP_STEUERUNG_HK1_ABWESENHEITSZEIT(can_obj_disp_h_t *o, int16_t in) {
+	assert(o);
+	o->can_0x1211221f_DISP_STEUERUNG_HK1_ABWESENHEITSZEIT.DISP_STEUERUNG_HK1_ABWESENHEITSZEIT = in;
+	return 0;
+}
+
+int print_can_0x1211221f_DISP_STEUERUNG_HK1_ABWESENHEITSZEIT(const can_obj_disp_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "DISP_STEUERUNG_HK1_ABWESENHEITSZEIT = (wire: %.0f)\n", (double)(o->can_0x1211221f_DISP_STEUERUNG_HK1_ABWESENHEITSZEIT.DISP_STEUERUNG_HK1_ABWESENHEITSZEIT)));
+	return r;
+}
+
+static int pack_can_0x12112222_DISP_STEUERUNG_HK1_PROGRAMM(can_obj_disp_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* DISP_STEUERUNG_HK1_PROGRAMM: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = ((uint16_t)(o->can_0x12112222_DISP_STEUERUNG_HK1_PROGRAMM.DISP_STEUERUNG_HK1_PROGRAMM)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x12112222_DISP_STEUERUNG_HK1_PROGRAMM_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x12112222_DISP_STEUERUNG_HK1_PROGRAMM(can_obj_disp_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* DISP_STEUERUNG_HK1_PROGRAMM: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x12112222_DISP_STEUERUNG_HK1_PROGRAMM.DISP_STEUERUNG_HK1_PROGRAMM = x;
+	o->can_0x12112222_DISP_STEUERUNG_HK1_PROGRAMM_rx = 1;
+	o->can_0x12112222_DISP_STEUERUNG_HK1_PROGRAMM_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x12112222_DISP_STEUERUNG_HK1_PROGRAMM(const can_obj_disp_h_t *o, int16_t *out) {
+	assert(o);
+	assert(out);
+	int16_t rval = (int16_t)(o->can_0x12112222_DISP_STEUERUNG_HK1_PROGRAMM.DISP_STEUERUNG_HK1_PROGRAMM);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x12112222_DISP_STEUERUNG_HK1_PROGRAMM(can_obj_disp_h_t *o, int16_t in) {
+	assert(o);
+	o->can_0x12112222_DISP_STEUERUNG_HK1_PROGRAMM.DISP_STEUERUNG_HK1_PROGRAMM = in;
+	return 0;
+}
+
+int print_can_0x12112222_DISP_STEUERUNG_HK1_PROGRAMM(const can_obj_disp_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "DISP_STEUERUNG_HK1_PROGRAMM = (wire: %.0f)\n", (double)(o->can_0x12112222_DISP_STEUERUNG_HK1_PROGRAMM.DISP_STEUERUNG_HK1_PROGRAMM)));
+	return r;
+}
+
+static int pack_can_0x12b8c20d_DISP_STEUERUNG_FESTBRENNOFEN_HOLZART(can_obj_disp_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* DISP_STEUERUNG_FESTBRENNOFEN_HOLZART: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = ((uint16_t)(o->can_0x12b8c20d_DISP_STEUERUNG_FESTBRENNOFEN_HOLZART.DISP_STEUERUNG_FESTBRENNOFEN_HOLZART)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x12b8c20d_DISP_STEUERUNG_FESTBRENNOFEN_HOLZART_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x12b8c20d_DISP_STEUERUNG_FESTBRENNOFEN_HOLZART(can_obj_disp_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* DISP_STEUERUNG_FESTBRENNOFEN_HOLZART: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x12b8c20d_DISP_STEUERUNG_FESTBRENNOFEN_HOLZART.DISP_STEUERUNG_FESTBRENNOFEN_HOLZART = x;
+	o->can_0x12b8c20d_DISP_STEUERUNG_FESTBRENNOFEN_HOLZART_rx = 1;
+	o->can_0x12b8c20d_DISP_STEUERUNG_FESTBRENNOFEN_HOLZART_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x12b8c20d_DISP_STEUERUNG_FESTBRENNOFEN_HOLZART(const can_obj_disp_h_t *o, int16_t *out) {
+	assert(o);
+	assert(out);
+	int16_t rval = (int16_t)(o->can_0x12b8c20d_DISP_STEUERUNG_FESTBRENNOFEN_HOLZART.DISP_STEUERUNG_FESTBRENNOFEN_HOLZART);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x12b8c20d_DISP_STEUERUNG_FESTBRENNOFEN_HOLZART(can_obj_disp_h_t *o, int16_t in) {
+	assert(o);
+	o->can_0x12b8c20d_DISP_STEUERUNG_FESTBRENNOFEN_HOLZART.DISP_STEUERUNG_FESTBRENNOFEN_HOLZART = in;
+	return 0;
+}
+
+int print_can_0x12b8c20d_DISP_STEUERUNG_FESTBRENNOFEN_HOLZART(const can_obj_disp_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "DISP_STEUERUNG_FESTBRENNOFEN_HOLZART = (wire: %.0f)\n", (double)(o->can_0x12b8c20d_DISP_STEUERUNG_FESTBRENNOFEN_HOLZART.DISP_STEUERUNG_FESTBRENNOFEN_HOLZART)));
+	return r;
+}
+
 int unpack_message(can_obj_disp_h_t *o, const unsigned long id, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
 	assert(o);
 	assert(id < (1ul << 29)); /* 29-bit CAN ID is largest possible */
 	assert(dlc <= 8);         /* Maximum of 8 bytes in a CAN packet */
 	switch (id) {
 	case 0xa10a612: return unpack_can_0xa10a612_DISP_STEUERUNG_ZUSATZHEIZUNG_PROGRAMM(o, data, dlc, time_stamp);
+	case 0xa10c21d: return unpack_can_0xa10c21d_DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT(o, data, dlc, time_stamp);
+	case 0xa11221e: return unpack_can_0xa11221e_DISP_STEUERUNG_HK1_DAUERBETRIEB(o, data, dlc, time_stamp);
+	case 0xa112224: return unpack_can_0xa112224_DISP_STEUERUNG_HK1_WAERMER_KAELTER(o, data, dlc, time_stamp);
+	case 0x1210c219: return unpack_can_0x1210c219_DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM(o, data, dlc, time_stamp);
+	case 0x12112213: return unpack_can_0x12112213_DISP_STEUERUNG_HK1_SOMMERBETRIEB(o, data, dlc, time_stamp);
+	case 0x1211221f: return unpack_can_0x1211221f_DISP_STEUERUNG_HK1_ABWESENHEITSZEIT(o, data, dlc, time_stamp);
+	case 0x12112222: return unpack_can_0x12112222_DISP_STEUERUNG_HK1_PROGRAMM(o, data, dlc, time_stamp);
+	case 0x12b8c20d: return unpack_can_0x12b8c20d_DISP_STEUERUNG_FESTBRENNOFEN_HOLZART(o, data, dlc, time_stamp);
 	default: break; 
 	}
 	return -1; 
@@ -83,6 +505,14 @@ int pack_message(can_obj_disp_h_t *o, const unsigned long id, uint64_t *data) {
 	assert(id < (1ul << 29)); /* 29-bit CAN ID is largest possible */
 	switch (id) {
 	case 0xa10a612: return pack_can_0xa10a612_DISP_STEUERUNG_ZUSATZHEIZUNG_PROGRAMM(o, data);
+	case 0xa10c21d: return pack_can_0xa10c21d_DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT(o, data);
+	case 0xa11221e: return pack_can_0xa11221e_DISP_STEUERUNG_HK1_DAUERBETRIEB(o, data);
+	case 0xa112224: return pack_can_0xa112224_DISP_STEUERUNG_HK1_WAERMER_KAELTER(o, data);
+	case 0x1210c219: return pack_can_0x1210c219_DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM(o, data);
+	case 0x12112213: return pack_can_0x12112213_DISP_STEUERUNG_HK1_SOMMERBETRIEB(o, data);
+	case 0x1211221f: return pack_can_0x1211221f_DISP_STEUERUNG_HK1_ABWESENHEITSZEIT(o, data);
+	case 0x12112222: return pack_can_0x12112222_DISP_STEUERUNG_HK1_PROGRAMM(o, data);
+	case 0x12b8c20d: return pack_can_0x12b8c20d_DISP_STEUERUNG_FESTBRENNOFEN_HOLZART(o, data);
 	default: break; 
 	}
 	return -1; 
@@ -94,6 +524,14 @@ int print_message(const can_obj_disp_h_t *o, const unsigned long id, FILE *outpu
 	assert(output);
 	switch (id) {
 	case 0xa10a612: return print_can_0xa10a612_DISP_STEUERUNG_ZUSATZHEIZUNG_PROGRAMM(o, output);
+	case 0xa10c21d: return print_can_0xa10c21d_DISP_STEUERUNG_WW_SOLLTEMPERATUR_PWT(o, output);
+	case 0xa11221e: return print_can_0xa11221e_DISP_STEUERUNG_HK1_DAUERBETRIEB(o, output);
+	case 0xa112224: return print_can_0xa112224_DISP_STEUERUNG_HK1_WAERMER_KAELTER(o, output);
+	case 0x1210c219: return print_can_0x1210c219_DISP_STEUERUNG_WW_ZIRKULATIONSPROGRAMM(o, output);
+	case 0x12112213: return print_can_0x12112213_DISP_STEUERUNG_HK1_SOMMERBETRIEB(o, output);
+	case 0x1211221f: return print_can_0x1211221f_DISP_STEUERUNG_HK1_ABWESENHEITSZEIT(o, output);
+	case 0x12112222: return print_can_0x12112222_DISP_STEUERUNG_HK1_PROGRAMM(o, output);
+	case 0x12b8c20d: return print_can_0x12b8c20d_DISP_STEUERUNG_FESTBRENNOFEN_HOLZART(o, output);
 	default: break; 
 	}
 	return -1; 

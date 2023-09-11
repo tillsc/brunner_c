@@ -69,12 +69,3544 @@ int print_can_0x1c104000_BHZ3_VOLUMENSTROM_SOLAR(const can_obj_bhz3_h_t *o, FILE
 	return r;
 }
 
+static int pack_can_0x1c104001_BHZ3_VOLUMENSTROM_WW(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_VOLUMENSTROM_WW: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c104001_BHZ3_VOLUMENSTROM_WW.BHZ3_VOLUMENSTROM_WW)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c104001_BHZ3_VOLUMENSTROM_WW_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c104001_BHZ3_VOLUMENSTROM_WW(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_VOLUMENSTROM_WW: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c104001_BHZ3_VOLUMENSTROM_WW.BHZ3_VOLUMENSTROM_WW = x;
+	o->can_0x1c104001_BHZ3_VOLUMENSTROM_WW_rx = 1;
+	o->can_0x1c104001_BHZ3_VOLUMENSTROM_WW_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c104001_BHZ3_VOLUMENSTROM_WW(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c104001_BHZ3_VOLUMENSTROM_WW.BHZ3_VOLUMENSTROM_WW);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c104001_BHZ3_VOLUMENSTROM_WW(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c104001_BHZ3_VOLUMENSTROM_WW.BHZ3_VOLUMENSTROM_WW = in;
+	return 0;
+}
+
+int print_can_0x1c104001_BHZ3_VOLUMENSTROM_WW(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_VOLUMENSTROM_WW = (wire: %.0f)\n", (double)(o->can_0x1c104001_BHZ3_VOLUMENSTROM_WW.BHZ3_VOLUMENSTROM_WW)));
+	return r;
+}
+
+static int pack_can_0x1c104003_BHZ3_VOLUMENSTROM_FESTBRENNOFEN(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_VOLUMENSTROM_FESTBRENNOFEN: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c104003_BHZ3_VOLUMENSTROM_FESTBRENNOFEN.BHZ3_VOLUMENSTROM_FESTBRENNOFEN)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c104003_BHZ3_VOLUMENSTROM_FESTBRENNOFEN_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c104003_BHZ3_VOLUMENSTROM_FESTBRENNOFEN(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_VOLUMENSTROM_FESTBRENNOFEN: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c104003_BHZ3_VOLUMENSTROM_FESTBRENNOFEN.BHZ3_VOLUMENSTROM_FESTBRENNOFEN = x;
+	o->can_0x1c104003_BHZ3_VOLUMENSTROM_FESTBRENNOFEN_rx = 1;
+	o->can_0x1c104003_BHZ3_VOLUMENSTROM_FESTBRENNOFEN_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c104003_BHZ3_VOLUMENSTROM_FESTBRENNOFEN(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c104003_BHZ3_VOLUMENSTROM_FESTBRENNOFEN.BHZ3_VOLUMENSTROM_FESTBRENNOFEN);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c104003_BHZ3_VOLUMENSTROM_FESTBRENNOFEN(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c104003_BHZ3_VOLUMENSTROM_FESTBRENNOFEN.BHZ3_VOLUMENSTROM_FESTBRENNOFEN = in;
+	return 0;
+}
+
+int print_can_0x1c104003_BHZ3_VOLUMENSTROM_FESTBRENNOFEN(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_VOLUMENSTROM_FESTBRENNOFEN = (wire: %.0f)\n", (double)(o->can_0x1c104003_BHZ3_VOLUMENSTROM_FESTBRENNOFEN.BHZ3_VOLUMENSTROM_FESTBRENNOFEN)));
+	return r;
+}
+
+static int pack_can_0x1c104004_BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c104004_BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG.BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c104004_BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c104004_BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c104004_BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG.BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG = x;
+	o->can_0x1c104004_BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG_rx = 1;
+	o->can_0x1c104004_BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c104004_BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c104004_BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG.BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c104004_BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c104004_BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG.BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG = in;
+	return 0;
+}
+
+int print_can_0x1c104004_BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG = (wire: %.0f)\n", (double)(o->can_0x1c104004_BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG.BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG)));
+	return r;
+}
+
+static int pack_can_0x1c104005_BHZ3_DRUCK_PUFFER(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_DRUCK_PUFFER: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c104005_BHZ3_DRUCK_PUFFER.BHZ3_DRUCK_PUFFER)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c104005_BHZ3_DRUCK_PUFFER_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c104005_BHZ3_DRUCK_PUFFER(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_DRUCK_PUFFER: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c104005_BHZ3_DRUCK_PUFFER.BHZ3_DRUCK_PUFFER = x;
+	o->can_0x1c104005_BHZ3_DRUCK_PUFFER_rx = 1;
+	o->can_0x1c104005_BHZ3_DRUCK_PUFFER_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c104005_BHZ3_DRUCK_PUFFER(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c104005_BHZ3_DRUCK_PUFFER.BHZ3_DRUCK_PUFFER);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c104005_BHZ3_DRUCK_PUFFER(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c104005_BHZ3_DRUCK_PUFFER.BHZ3_DRUCK_PUFFER = in;
+	return 0;
+}
+
+int print_can_0x1c104005_BHZ3_DRUCK_PUFFER(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_DRUCK_PUFFER = (wire: %.0f)\n", (double)(o->can_0x1c104005_BHZ3_DRUCK_PUFFER.BHZ3_DRUCK_PUFFER)));
+	return r;
+}
+
+static int pack_can_0x1c104006_BHZ3_VOLUMENSTROM_HK1(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_VOLUMENSTROM_HK1: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c104006_BHZ3_VOLUMENSTROM_HK1.BHZ3_VOLUMENSTROM_HK1)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c104006_BHZ3_VOLUMENSTROM_HK1_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c104006_BHZ3_VOLUMENSTROM_HK1(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_VOLUMENSTROM_HK1: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c104006_BHZ3_VOLUMENSTROM_HK1.BHZ3_VOLUMENSTROM_HK1 = x;
+	o->can_0x1c104006_BHZ3_VOLUMENSTROM_HK1_rx = 1;
+	o->can_0x1c104006_BHZ3_VOLUMENSTROM_HK1_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c104006_BHZ3_VOLUMENSTROM_HK1(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c104006_BHZ3_VOLUMENSTROM_HK1.BHZ3_VOLUMENSTROM_HK1);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c104006_BHZ3_VOLUMENSTROM_HK1(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c104006_BHZ3_VOLUMENSTROM_HK1.BHZ3_VOLUMENSTROM_HK1 = in;
+	return 0;
+}
+
+int print_can_0x1c104006_BHZ3_VOLUMENSTROM_HK1(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_VOLUMENSTROM_HK1 = (wire: %.0f)\n", (double)(o->can_0x1c104006_BHZ3_VOLUMENSTROM_HK1.BHZ3_VOLUMENSTROM_HK1)));
+	return r;
+}
+
+static int pack_can_0x1c104009_BHZ3_TEMPERATUR_HK1_VL(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_TEMPERATUR_HK1_VL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c104009_BHZ3_TEMPERATUR_HK1_VL.BHZ3_TEMPERATUR_HK1_VL)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c104009_BHZ3_TEMPERATUR_HK1_VL_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c104009_BHZ3_TEMPERATUR_HK1_VL(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_TEMPERATUR_HK1_VL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c104009_BHZ3_TEMPERATUR_HK1_VL.BHZ3_TEMPERATUR_HK1_VL = x;
+	o->can_0x1c104009_BHZ3_TEMPERATUR_HK1_VL_rx = 1;
+	o->can_0x1c104009_BHZ3_TEMPERATUR_HK1_VL_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c104009_BHZ3_TEMPERATUR_HK1_VL(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c104009_BHZ3_TEMPERATUR_HK1_VL.BHZ3_TEMPERATUR_HK1_VL);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c104009_BHZ3_TEMPERATUR_HK1_VL(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c104009_BHZ3_TEMPERATUR_HK1_VL.BHZ3_TEMPERATUR_HK1_VL = in;
+	return 0;
+}
+
+int print_can_0x1c104009_BHZ3_TEMPERATUR_HK1_VL(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_TEMPERATUR_HK1_VL = (wire: %.0f)\n", (double)(o->can_0x1c104009_BHZ3_TEMPERATUR_HK1_VL.BHZ3_TEMPERATUR_HK1_VL)));
+	return r;
+}
+
+static int pack_can_0x1c10400a_BHZ3_TEMPERATUR_HK2_VL(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_TEMPERATUR_HK2_VL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c10400a_BHZ3_TEMPERATUR_HK2_VL.BHZ3_TEMPERATUR_HK2_VL)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c10400a_BHZ3_TEMPERATUR_HK2_VL_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c10400a_BHZ3_TEMPERATUR_HK2_VL(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_TEMPERATUR_HK2_VL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c10400a_BHZ3_TEMPERATUR_HK2_VL.BHZ3_TEMPERATUR_HK2_VL = x;
+	o->can_0x1c10400a_BHZ3_TEMPERATUR_HK2_VL_rx = 1;
+	o->can_0x1c10400a_BHZ3_TEMPERATUR_HK2_VL_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c10400a_BHZ3_TEMPERATUR_HK2_VL(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c10400a_BHZ3_TEMPERATUR_HK2_VL.BHZ3_TEMPERATUR_HK2_VL);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c10400a_BHZ3_TEMPERATUR_HK2_VL(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c10400a_BHZ3_TEMPERATUR_HK2_VL.BHZ3_TEMPERATUR_HK2_VL = in;
+	return 0;
+}
+
+int print_can_0x1c10400a_BHZ3_TEMPERATUR_HK2_VL(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_TEMPERATUR_HK2_VL = (wire: %.0f)\n", (double)(o->can_0x1c10400a_BHZ3_TEMPERATUR_HK2_VL.BHZ3_TEMPERATUR_HK2_VL)));
+	return r;
+}
+
+static int pack_can_0x1c10400b_BHZ3_TEMPERATUR_PUFFER_OBEN(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_TEMPERATUR_PUFFER_OBEN: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c10400b_BHZ3_TEMPERATUR_PUFFER_OBEN.BHZ3_TEMPERATUR_PUFFER_OBEN)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c10400b_BHZ3_TEMPERATUR_PUFFER_OBEN_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c10400b_BHZ3_TEMPERATUR_PUFFER_OBEN(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_TEMPERATUR_PUFFER_OBEN: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c10400b_BHZ3_TEMPERATUR_PUFFER_OBEN.BHZ3_TEMPERATUR_PUFFER_OBEN = x;
+	o->can_0x1c10400b_BHZ3_TEMPERATUR_PUFFER_OBEN_rx = 1;
+	o->can_0x1c10400b_BHZ3_TEMPERATUR_PUFFER_OBEN_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c10400b_BHZ3_TEMPERATUR_PUFFER_OBEN(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c10400b_BHZ3_TEMPERATUR_PUFFER_OBEN.BHZ3_TEMPERATUR_PUFFER_OBEN);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c10400b_BHZ3_TEMPERATUR_PUFFER_OBEN(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c10400b_BHZ3_TEMPERATUR_PUFFER_OBEN.BHZ3_TEMPERATUR_PUFFER_OBEN = in;
+	return 0;
+}
+
+int print_can_0x1c10400b_BHZ3_TEMPERATUR_PUFFER_OBEN(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_TEMPERATUR_PUFFER_OBEN = (wire: %.0f)\n", (double)(o->can_0x1c10400b_BHZ3_TEMPERATUR_PUFFER_OBEN.BHZ3_TEMPERATUR_PUFFER_OBEN)));
+	return r;
+}
+
+static int pack_can_0x1c10400c_BHZ3_TEMPERATUR_PUFFER_MITTE(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_TEMPERATUR_PUFFER_MITTE: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c10400c_BHZ3_TEMPERATUR_PUFFER_MITTE.BHZ3_TEMPERATUR_PUFFER_MITTE)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c10400c_BHZ3_TEMPERATUR_PUFFER_MITTE_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c10400c_BHZ3_TEMPERATUR_PUFFER_MITTE(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_TEMPERATUR_PUFFER_MITTE: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c10400c_BHZ3_TEMPERATUR_PUFFER_MITTE.BHZ3_TEMPERATUR_PUFFER_MITTE = x;
+	o->can_0x1c10400c_BHZ3_TEMPERATUR_PUFFER_MITTE_rx = 1;
+	o->can_0x1c10400c_BHZ3_TEMPERATUR_PUFFER_MITTE_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c10400c_BHZ3_TEMPERATUR_PUFFER_MITTE(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c10400c_BHZ3_TEMPERATUR_PUFFER_MITTE.BHZ3_TEMPERATUR_PUFFER_MITTE);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c10400c_BHZ3_TEMPERATUR_PUFFER_MITTE(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c10400c_BHZ3_TEMPERATUR_PUFFER_MITTE.BHZ3_TEMPERATUR_PUFFER_MITTE = in;
+	return 0;
+}
+
+int print_can_0x1c10400c_BHZ3_TEMPERATUR_PUFFER_MITTE(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_TEMPERATUR_PUFFER_MITTE = (wire: %.0f)\n", (double)(o->can_0x1c10400c_BHZ3_TEMPERATUR_PUFFER_MITTE.BHZ3_TEMPERATUR_PUFFER_MITTE)));
+	return r;
+}
+
+static int pack_can_0x1c10400d_BHZ3_TEMPERATUR_PUFFER_UNTEN(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_TEMPERATUR_PUFFER_UNTEN: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c10400d_BHZ3_TEMPERATUR_PUFFER_UNTEN.BHZ3_TEMPERATUR_PUFFER_UNTEN)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c10400d_BHZ3_TEMPERATUR_PUFFER_UNTEN_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c10400d_BHZ3_TEMPERATUR_PUFFER_UNTEN(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_TEMPERATUR_PUFFER_UNTEN: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c10400d_BHZ3_TEMPERATUR_PUFFER_UNTEN.BHZ3_TEMPERATUR_PUFFER_UNTEN = x;
+	o->can_0x1c10400d_BHZ3_TEMPERATUR_PUFFER_UNTEN_rx = 1;
+	o->can_0x1c10400d_BHZ3_TEMPERATUR_PUFFER_UNTEN_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c10400d_BHZ3_TEMPERATUR_PUFFER_UNTEN(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c10400d_BHZ3_TEMPERATUR_PUFFER_UNTEN.BHZ3_TEMPERATUR_PUFFER_UNTEN);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c10400d_BHZ3_TEMPERATUR_PUFFER_UNTEN(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c10400d_BHZ3_TEMPERATUR_PUFFER_UNTEN.BHZ3_TEMPERATUR_PUFFER_UNTEN = in;
+	return 0;
+}
+
+int print_can_0x1c10400d_BHZ3_TEMPERATUR_PUFFER_UNTEN(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_TEMPERATUR_PUFFER_UNTEN = (wire: %.0f)\n", (double)(o->can_0x1c10400d_BHZ3_TEMPERATUR_PUFFER_UNTEN.BHZ3_TEMPERATUR_PUFFER_UNTEN)));
+	return r;
+}
+
+static int pack_can_0x1c10400e_BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c10400e_BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER.BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c10400e_BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c10400e_BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c10400e_BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER.BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER = x;
+	o->can_0x1c10400e_BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER_rx = 1;
+	o->can_0x1c10400e_BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c10400e_BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c10400e_BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER.BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c10400e_BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c10400e_BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER.BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER = in;
+	return 0;
+}
+
+int print_can_0x1c10400e_BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER = (wire: %.0f)\n", (double)(o->can_0x1c10400e_BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER.BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER)));
+	return r;
+}
+
+static int pack_can_0x1c10400f_BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c10400f_BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR.BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c10400f_BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c10400f_BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c10400f_BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR.BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR = x;
+	o->can_0x1c10400f_BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR_rx = 1;
+	o->can_0x1c10400f_BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c10400f_BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c10400f_BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR.BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c10400f_BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c10400f_BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR.BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR = in;
+	return 0;
+}
+
+int print_can_0x1c10400f_BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR = (wire: %.0f)\n", (double)(o->can_0x1c10400f_BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR.BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR)));
+	return r;
+}
+
+static int pack_can_0x1c104010_BHZ3_TEMPERATUR_SOLAR_RL(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_TEMPERATUR_SOLAR_RL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c104010_BHZ3_TEMPERATUR_SOLAR_RL.BHZ3_TEMPERATUR_SOLAR_RL)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c104010_BHZ3_TEMPERATUR_SOLAR_RL_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c104010_BHZ3_TEMPERATUR_SOLAR_RL(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_TEMPERATUR_SOLAR_RL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c104010_BHZ3_TEMPERATUR_SOLAR_RL.BHZ3_TEMPERATUR_SOLAR_RL = x;
+	o->can_0x1c104010_BHZ3_TEMPERATUR_SOLAR_RL_rx = 1;
+	o->can_0x1c104010_BHZ3_TEMPERATUR_SOLAR_RL_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c104010_BHZ3_TEMPERATUR_SOLAR_RL(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c104010_BHZ3_TEMPERATUR_SOLAR_RL.BHZ3_TEMPERATUR_SOLAR_RL);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c104010_BHZ3_TEMPERATUR_SOLAR_RL(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c104010_BHZ3_TEMPERATUR_SOLAR_RL.BHZ3_TEMPERATUR_SOLAR_RL = in;
+	return 0;
+}
+
+int print_can_0x1c104010_BHZ3_TEMPERATUR_SOLAR_RL(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_TEMPERATUR_SOLAR_RL = (wire: %.0f)\n", (double)(o->can_0x1c104010_BHZ3_TEMPERATUR_SOLAR_RL.BHZ3_TEMPERATUR_SOLAR_RL)));
+	return r;
+}
+
+static int pack_can_0x1c104012_BHZ3_TEMPERATUR_WW_ZIRKULATION(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_TEMPERATUR_WW_ZIRKULATION: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c104012_BHZ3_TEMPERATUR_WW_ZIRKULATION.BHZ3_TEMPERATUR_WW_ZIRKULATION)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c104012_BHZ3_TEMPERATUR_WW_ZIRKULATION_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c104012_BHZ3_TEMPERATUR_WW_ZIRKULATION(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_TEMPERATUR_WW_ZIRKULATION: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c104012_BHZ3_TEMPERATUR_WW_ZIRKULATION.BHZ3_TEMPERATUR_WW_ZIRKULATION = x;
+	o->can_0x1c104012_BHZ3_TEMPERATUR_WW_ZIRKULATION_rx = 1;
+	o->can_0x1c104012_BHZ3_TEMPERATUR_WW_ZIRKULATION_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c104012_BHZ3_TEMPERATUR_WW_ZIRKULATION(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c104012_BHZ3_TEMPERATUR_WW_ZIRKULATION.BHZ3_TEMPERATUR_WW_ZIRKULATION);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c104012_BHZ3_TEMPERATUR_WW_ZIRKULATION(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c104012_BHZ3_TEMPERATUR_WW_ZIRKULATION.BHZ3_TEMPERATUR_WW_ZIRKULATION = in;
+	return 0;
+}
+
+int print_can_0x1c104012_BHZ3_TEMPERATUR_WW_ZIRKULATION(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_TEMPERATUR_WW_ZIRKULATION = (wire: %.0f)\n", (double)(o->can_0x1c104012_BHZ3_TEMPERATUR_WW_ZIRKULATION.BHZ3_TEMPERATUR_WW_ZIRKULATION)));
+	return r;
+}
+
+static int pack_can_0x1c104013_BHZ3_TEMPERATUR_WETTER(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_TEMPERATUR_WETTER: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c104013_BHZ3_TEMPERATUR_WETTER.BHZ3_TEMPERATUR_WETTER)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c104013_BHZ3_TEMPERATUR_WETTER_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c104013_BHZ3_TEMPERATUR_WETTER(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_TEMPERATUR_WETTER: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c104013_BHZ3_TEMPERATUR_WETTER.BHZ3_TEMPERATUR_WETTER = x;
+	o->can_0x1c104013_BHZ3_TEMPERATUR_WETTER_rx = 1;
+	o->can_0x1c104013_BHZ3_TEMPERATUR_WETTER_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c104013_BHZ3_TEMPERATUR_WETTER(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c104013_BHZ3_TEMPERATUR_WETTER.BHZ3_TEMPERATUR_WETTER);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c104013_BHZ3_TEMPERATUR_WETTER(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c104013_BHZ3_TEMPERATUR_WETTER.BHZ3_TEMPERATUR_WETTER = in;
+	return 0;
+}
+
+int print_can_0x1c104013_BHZ3_TEMPERATUR_WETTER(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_TEMPERATUR_WETTER = (wire: %.0f)\n", (double)(o->can_0x1c104013_BHZ3_TEMPERATUR_WETTER.BHZ3_TEMPERATUR_WETTER)));
+	return r;
+}
+
+static int pack_can_0x1c104014_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c104014_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR.BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c104014_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c104014_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c104014_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR.BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR = x;
+	o->can_0x1c104014_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR_rx = 1;
+	o->can_0x1c104014_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c104014_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c104014_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR.BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c104014_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c104014_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR.BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR = in;
+	return 0;
+}
+
+int print_can_0x1c104014_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR = (wire: %.0f)\n", (double)(o->can_0x1c104014_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR.BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR)));
+	return r;
+}
+
+static int pack_can_0x1c104015_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c104015_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL.BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c104015_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c104015_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c104015_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL.BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL = x;
+	o->can_0x1c104015_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL_rx = 1;
+	o->can_0x1c104015_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c104015_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c104015_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL.BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c104015_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c104015_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL.BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL = in;
+	return 0;
+}
+
+int print_can_0x1c104015_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL = (wire: %.0f)\n", (double)(o->can_0x1c104015_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL.BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL)));
+	return r;
+}
+
+static int pack_can_0x1c104016_BHZ3_TEMPERATUR_SOLAR_SEK_RL(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_TEMPERATUR_SOLAR_SEK_RL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c104016_BHZ3_TEMPERATUR_SOLAR_SEK_RL.BHZ3_TEMPERATUR_SOLAR_SEK_RL)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c104016_BHZ3_TEMPERATUR_SOLAR_SEK_RL_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c104016_BHZ3_TEMPERATUR_SOLAR_SEK_RL(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_TEMPERATUR_SOLAR_SEK_RL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c104016_BHZ3_TEMPERATUR_SOLAR_SEK_RL.BHZ3_TEMPERATUR_SOLAR_SEK_RL = x;
+	o->can_0x1c104016_BHZ3_TEMPERATUR_SOLAR_SEK_RL_rx = 1;
+	o->can_0x1c104016_BHZ3_TEMPERATUR_SOLAR_SEK_RL_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c104016_BHZ3_TEMPERATUR_SOLAR_SEK_RL(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c104016_BHZ3_TEMPERATUR_SOLAR_SEK_RL.BHZ3_TEMPERATUR_SOLAR_SEK_RL);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c104016_BHZ3_TEMPERATUR_SOLAR_SEK_RL(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c104016_BHZ3_TEMPERATUR_SOLAR_SEK_RL.BHZ3_TEMPERATUR_SOLAR_SEK_RL = in;
+	return 0;
+}
+
+int print_can_0x1c104016_BHZ3_TEMPERATUR_SOLAR_SEK_RL(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_TEMPERATUR_SOLAR_SEK_RL = (wire: %.0f)\n", (double)(o->can_0x1c104016_BHZ3_TEMPERATUR_SOLAR_SEK_RL.BHZ3_TEMPERATUR_SOLAR_SEK_RL)));
+	return r;
+}
+
+static int pack_can_0x1c104019_BHZ3_TEMPERATUR_SOLAR_PRIM_VL(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_TEMPERATUR_SOLAR_PRIM_VL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c104019_BHZ3_TEMPERATUR_SOLAR_PRIM_VL.BHZ3_TEMPERATUR_SOLAR_PRIM_VL)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c104019_BHZ3_TEMPERATUR_SOLAR_PRIM_VL_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c104019_BHZ3_TEMPERATUR_SOLAR_PRIM_VL(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_TEMPERATUR_SOLAR_PRIM_VL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c104019_BHZ3_TEMPERATUR_SOLAR_PRIM_VL.BHZ3_TEMPERATUR_SOLAR_PRIM_VL = x;
+	o->can_0x1c104019_BHZ3_TEMPERATUR_SOLAR_PRIM_VL_rx = 1;
+	o->can_0x1c104019_BHZ3_TEMPERATUR_SOLAR_PRIM_VL_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c104019_BHZ3_TEMPERATUR_SOLAR_PRIM_VL(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c104019_BHZ3_TEMPERATUR_SOLAR_PRIM_VL.BHZ3_TEMPERATUR_SOLAR_PRIM_VL);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c104019_BHZ3_TEMPERATUR_SOLAR_PRIM_VL(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c104019_BHZ3_TEMPERATUR_SOLAR_PRIM_VL.BHZ3_TEMPERATUR_SOLAR_PRIM_VL = in;
+	return 0;
+}
+
+int print_can_0x1c104019_BHZ3_TEMPERATUR_SOLAR_PRIM_VL(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_TEMPERATUR_SOLAR_PRIM_VL = (wire: %.0f)\n", (double)(o->can_0x1c104019_BHZ3_TEMPERATUR_SOLAR_PRIM_VL.BHZ3_TEMPERATUR_SOLAR_PRIM_VL)));
+	return r;
+}
+
+static int pack_can_0x1c10401b_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c10401b_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL.BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c10401b_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c10401b_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c10401b_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL.BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL = x;
+	o->can_0x1c10401b_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL_rx = 1;
+	o->can_0x1c10401b_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c10401b_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c10401b_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL.BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c10401b_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c10401b_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL.BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL = in;
+	return 0;
+}
+
+int print_can_0x1c10401b_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL = (wire: %.0f)\n", (double)(o->can_0x1c10401b_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL.BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL)));
+	return r;
+}
+
+static int pack_can_0x1c10401c_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c10401c_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL.BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c10401c_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c10401c_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c10401c_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL.BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL = x;
+	o->can_0x1c10401c_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL_rx = 1;
+	o->can_0x1c10401c_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c10401c_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c10401c_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL.BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c10401c_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c10401c_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL.BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL = in;
+	return 0;
+}
+
+int print_can_0x1c10401c_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL = (wire: %.0f)\n", (double)(o->can_0x1c10401c_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL.BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL)));
+	return r;
+}
+
+static int pack_can_0x1c10401e_BHZ3_TEMPERATUR_HK1_RL(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_TEMPERATUR_HK1_RL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c10401e_BHZ3_TEMPERATUR_HK1_RL.BHZ3_TEMPERATUR_HK1_RL)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c10401e_BHZ3_TEMPERATUR_HK1_RL_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c10401e_BHZ3_TEMPERATUR_HK1_RL(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_TEMPERATUR_HK1_RL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c10401e_BHZ3_TEMPERATUR_HK1_RL.BHZ3_TEMPERATUR_HK1_RL = x;
+	o->can_0x1c10401e_BHZ3_TEMPERATUR_HK1_RL_rx = 1;
+	o->can_0x1c10401e_BHZ3_TEMPERATUR_HK1_RL_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c10401e_BHZ3_TEMPERATUR_HK1_RL(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c10401e_BHZ3_TEMPERATUR_HK1_RL.BHZ3_TEMPERATUR_HK1_RL);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c10401e_BHZ3_TEMPERATUR_HK1_RL(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c10401e_BHZ3_TEMPERATUR_HK1_RL.BHZ3_TEMPERATUR_HK1_RL = in;
+	return 0;
+}
+
+int print_can_0x1c10401e_BHZ3_TEMPERATUR_HK1_RL(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_TEMPERATUR_HK1_RL = (wire: %.0f)\n", (double)(o->can_0x1c10401e_BHZ3_TEMPERATUR_HK1_RL.BHZ3_TEMPERATUR_HK1_RL)));
+	return r;
+}
+
+static int pack_can_0x1c10401f_BHZ3_TEMPERATUR_HK2_RL(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_TEMPERATUR_HK2_RL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c10401f_BHZ3_TEMPERATUR_HK2_RL.BHZ3_TEMPERATUR_HK2_RL)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c10401f_BHZ3_TEMPERATUR_HK2_RL_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c10401f_BHZ3_TEMPERATUR_HK2_RL(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_TEMPERATUR_HK2_RL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c10401f_BHZ3_TEMPERATUR_HK2_RL.BHZ3_TEMPERATUR_HK2_RL = x;
+	o->can_0x1c10401f_BHZ3_TEMPERATUR_HK2_RL_rx = 1;
+	o->can_0x1c10401f_BHZ3_TEMPERATUR_HK2_RL_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c10401f_BHZ3_TEMPERATUR_HK2_RL(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c10401f_BHZ3_TEMPERATUR_HK2_RL.BHZ3_TEMPERATUR_HK2_RL);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c10401f_BHZ3_TEMPERATUR_HK2_RL(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c10401f_BHZ3_TEMPERATUR_HK2_RL.BHZ3_TEMPERATUR_HK2_RL = in;
+	return 0;
+}
+
+int print_can_0x1c10401f_BHZ3_TEMPERATUR_HK2_RL(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_TEMPERATUR_HK2_RL = (wire: %.0f)\n", (double)(o->can_0x1c10401f_BHZ3_TEMPERATUR_HK2_RL.BHZ3_TEMPERATUR_HK2_RL)));
+	return r;
+}
+
+static int pack_can_0x1c104020_BHZ3_TEMPERATUR_WW_PRIM_VL(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_TEMPERATUR_WW_PRIM_VL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c104020_BHZ3_TEMPERATUR_WW_PRIM_VL.BHZ3_TEMPERATUR_WW_PRIM_VL)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c104020_BHZ3_TEMPERATUR_WW_PRIM_VL_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c104020_BHZ3_TEMPERATUR_WW_PRIM_VL(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_TEMPERATUR_WW_PRIM_VL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c104020_BHZ3_TEMPERATUR_WW_PRIM_VL.BHZ3_TEMPERATUR_WW_PRIM_VL = x;
+	o->can_0x1c104020_BHZ3_TEMPERATUR_WW_PRIM_VL_rx = 1;
+	o->can_0x1c104020_BHZ3_TEMPERATUR_WW_PRIM_VL_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c104020_BHZ3_TEMPERATUR_WW_PRIM_VL(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c104020_BHZ3_TEMPERATUR_WW_PRIM_VL.BHZ3_TEMPERATUR_WW_PRIM_VL);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c104020_BHZ3_TEMPERATUR_WW_PRIM_VL(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c104020_BHZ3_TEMPERATUR_WW_PRIM_VL.BHZ3_TEMPERATUR_WW_PRIM_VL = in;
+	return 0;
+}
+
+int print_can_0x1c104020_BHZ3_TEMPERATUR_WW_PRIM_VL(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_TEMPERATUR_WW_PRIM_VL = (wire: %.0f)\n", (double)(o->can_0x1c104020_BHZ3_TEMPERATUR_WW_PRIM_VL.BHZ3_TEMPERATUR_WW_PRIM_VL)));
+	return r;
+}
+
+static int pack_can_0x1c104021_BHZ3_TEMPERATUR_WW_PRIM_RL(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_TEMPERATUR_WW_PRIM_RL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c104021_BHZ3_TEMPERATUR_WW_PRIM_RL.BHZ3_TEMPERATUR_WW_PRIM_RL)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c104021_BHZ3_TEMPERATUR_WW_PRIM_RL_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c104021_BHZ3_TEMPERATUR_WW_PRIM_RL(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_TEMPERATUR_WW_PRIM_RL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c104021_BHZ3_TEMPERATUR_WW_PRIM_RL.BHZ3_TEMPERATUR_WW_PRIM_RL = x;
+	o->can_0x1c104021_BHZ3_TEMPERATUR_WW_PRIM_RL_rx = 1;
+	o->can_0x1c104021_BHZ3_TEMPERATUR_WW_PRIM_RL_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c104021_BHZ3_TEMPERATUR_WW_PRIM_RL(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c104021_BHZ3_TEMPERATUR_WW_PRIM_RL.BHZ3_TEMPERATUR_WW_PRIM_RL);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c104021_BHZ3_TEMPERATUR_WW_PRIM_RL(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c104021_BHZ3_TEMPERATUR_WW_PRIM_RL.BHZ3_TEMPERATUR_WW_PRIM_RL = in;
+	return 0;
+}
+
+int print_can_0x1c104021_BHZ3_TEMPERATUR_WW_PRIM_RL(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_TEMPERATUR_WW_PRIM_RL = (wire: %.0f)\n", (double)(o->can_0x1c104021_BHZ3_TEMPERATUR_WW_PRIM_RL.BHZ3_TEMPERATUR_WW_PRIM_RL)));
+	return r;
+}
+
+static int pack_can_0x1c104022_BHZ3_TEMPERATUR_WW_IST(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_TEMPERATUR_WW_IST: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c104022_BHZ3_TEMPERATUR_WW_IST.BHZ3_TEMPERATUR_WW_IST)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c104022_BHZ3_TEMPERATUR_WW_IST_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c104022_BHZ3_TEMPERATUR_WW_IST(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_TEMPERATUR_WW_IST: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c104022_BHZ3_TEMPERATUR_WW_IST.BHZ3_TEMPERATUR_WW_IST = x;
+	o->can_0x1c104022_BHZ3_TEMPERATUR_WW_IST_rx = 1;
+	o->can_0x1c104022_BHZ3_TEMPERATUR_WW_IST_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c104022_BHZ3_TEMPERATUR_WW_IST(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c104022_BHZ3_TEMPERATUR_WW_IST.BHZ3_TEMPERATUR_WW_IST);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c104022_BHZ3_TEMPERATUR_WW_IST(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c104022_BHZ3_TEMPERATUR_WW_IST.BHZ3_TEMPERATUR_WW_IST = in;
+	return 0;
+}
+
+int print_can_0x1c104022_BHZ3_TEMPERATUR_WW_IST(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_TEMPERATUR_WW_IST = (wire: %.0f)\n", (double)(o->can_0x1c104022_BHZ3_TEMPERATUR_WW_IST.BHZ3_TEMPERATUR_WW_IST)));
+	return r;
+}
+
+static int pack_can_0x1c106002_BHZ3_UNKLAHR_WW(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_UNKLAHR_WW: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c106002_BHZ3_UNKLAHR_WW.BHZ3_UNKLAHR_WW)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c106002_BHZ3_UNKLAHR_WW_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c106002_BHZ3_UNKLAHR_WW(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_UNKLAHR_WW: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c106002_BHZ3_UNKLAHR_WW.BHZ3_UNKLAHR_WW = x;
+	o->can_0x1c106002_BHZ3_UNKLAHR_WW_rx = 1;
+	o->can_0x1c106002_BHZ3_UNKLAHR_WW_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c106002_BHZ3_UNKLAHR_WW(const can_obj_bhz3_h_t *o, int16_t *out) {
+	assert(o);
+	assert(out);
+	int16_t rval = (int16_t)(o->can_0x1c106002_BHZ3_UNKLAHR_WW.BHZ3_UNKLAHR_WW);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c106002_BHZ3_UNKLAHR_WW(can_obj_bhz3_h_t *o, int16_t in) {
+	assert(o);
+	o->can_0x1c106002_BHZ3_UNKLAHR_WW.BHZ3_UNKLAHR_WW = in;
+	return 0;
+}
+
+int print_can_0x1c106002_BHZ3_UNKLAHR_WW(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_UNKLAHR_WW = (wire: %.0f)\n", (double)(o->can_0x1c106002_BHZ3_UNKLAHR_WW.BHZ3_UNKLAHR_WW)));
+	return r;
+}
+
+static int pack_can_0x1c106008_BHZ3_STATUS_HK1_EIN_AUS(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_STATUS_HK1_EIN_AUS: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c106008_BHZ3_STATUS_HK1_EIN_AUS.BHZ3_STATUS_HK1_EIN_AUS)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c106008_BHZ3_STATUS_HK1_EIN_AUS_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c106008_BHZ3_STATUS_HK1_EIN_AUS(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_STATUS_HK1_EIN_AUS: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c106008_BHZ3_STATUS_HK1_EIN_AUS.BHZ3_STATUS_HK1_EIN_AUS = x;
+	o->can_0x1c106008_BHZ3_STATUS_HK1_EIN_AUS_rx = 1;
+	o->can_0x1c106008_BHZ3_STATUS_HK1_EIN_AUS_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c106008_BHZ3_STATUS_HK1_EIN_AUS(const can_obj_bhz3_h_t *o, int16_t *out) {
+	assert(o);
+	assert(out);
+	int16_t rval = (int16_t)(o->can_0x1c106008_BHZ3_STATUS_HK1_EIN_AUS.BHZ3_STATUS_HK1_EIN_AUS);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c106008_BHZ3_STATUS_HK1_EIN_AUS(can_obj_bhz3_h_t *o, int16_t in) {
+	assert(o);
+	o->can_0x1c106008_BHZ3_STATUS_HK1_EIN_AUS.BHZ3_STATUS_HK1_EIN_AUS = in;
+	return 0;
+}
+
+int print_can_0x1c106008_BHZ3_STATUS_HK1_EIN_AUS(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_STATUS_HK1_EIN_AUS = (wire: %.0f)\n", (double)(o->can_0x1c106008_BHZ3_STATUS_HK1_EIN_AUS.BHZ3_STATUS_HK1_EIN_AUS)));
+	return r;
+}
+
+static int pack_can_0x1c10600a_BHZ3_STATUS_HK1_AUS_EIN(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_STATUS_HK1_AUS_EIN: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c10600a_BHZ3_STATUS_HK1_AUS_EIN.BHZ3_STATUS_HK1_AUS_EIN)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c10600a_BHZ3_STATUS_HK1_AUS_EIN_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c10600a_BHZ3_STATUS_HK1_AUS_EIN(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_STATUS_HK1_AUS_EIN: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c10600a_BHZ3_STATUS_HK1_AUS_EIN.BHZ3_STATUS_HK1_AUS_EIN = x;
+	o->can_0x1c10600a_BHZ3_STATUS_HK1_AUS_EIN_rx = 1;
+	o->can_0x1c10600a_BHZ3_STATUS_HK1_AUS_EIN_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c10600a_BHZ3_STATUS_HK1_AUS_EIN(const can_obj_bhz3_h_t *o, int16_t *out) {
+	assert(o);
+	assert(out);
+	int16_t rval = (int16_t)(o->can_0x1c10600a_BHZ3_STATUS_HK1_AUS_EIN.BHZ3_STATUS_HK1_AUS_EIN);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c10600a_BHZ3_STATUS_HK1_AUS_EIN(can_obj_bhz3_h_t *o, int16_t in) {
+	assert(o);
+	o->can_0x1c10600a_BHZ3_STATUS_HK1_AUS_EIN.BHZ3_STATUS_HK1_AUS_EIN = in;
+	return 0;
+}
+
+int print_can_0x1c10600a_BHZ3_STATUS_HK1_AUS_EIN(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_STATUS_HK1_AUS_EIN = (wire: %.0f)\n", (double)(o->can_0x1c10600a_BHZ3_STATUS_HK1_AUS_EIN.BHZ3_STATUS_HK1_AUS_EIN)));
+	return r;
+}
+
+static int pack_can_0x1c106013_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c106013_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV.BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c106013_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c106013_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c106013_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV.BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV = x;
+	o->can_0x1c106013_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV_rx = 1;
+	o->can_0x1c106013_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c106013_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV(const can_obj_bhz3_h_t *o, int16_t *out) {
+	assert(o);
+	assert(out);
+	int16_t rval = (int16_t)(o->can_0x1c106013_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV.BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c106013_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV(can_obj_bhz3_h_t *o, int16_t in) {
+	assert(o);
+	o->can_0x1c106013_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV.BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV = in;
+	return 0;
+}
+
+int print_can_0x1c106013_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV = (wire: %.0f)\n", (double)(o->can_0x1c106013_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV.BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV)));
+	return r;
+}
+
+static int pack_can_0x1c10801a_BHZ3_LEISTUNG_FESTBRENNOFEN(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_LEISTUNG_FESTBRENNOFEN: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c10801a_BHZ3_LEISTUNG_FESTBRENNOFEN.BHZ3_LEISTUNG_FESTBRENNOFEN)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c10801a_BHZ3_LEISTUNG_FESTBRENNOFEN_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c10801a_BHZ3_LEISTUNG_FESTBRENNOFEN(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_LEISTUNG_FESTBRENNOFEN: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c10801a_BHZ3_LEISTUNG_FESTBRENNOFEN.BHZ3_LEISTUNG_FESTBRENNOFEN = x;
+	o->can_0x1c10801a_BHZ3_LEISTUNG_FESTBRENNOFEN_rx = 1;
+	o->can_0x1c10801a_BHZ3_LEISTUNG_FESTBRENNOFEN_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c10801a_BHZ3_LEISTUNG_FESTBRENNOFEN(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c10801a_BHZ3_LEISTUNG_FESTBRENNOFEN.BHZ3_LEISTUNG_FESTBRENNOFEN);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c10801a_BHZ3_LEISTUNG_FESTBRENNOFEN(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c10801a_BHZ3_LEISTUNG_FESTBRENNOFEN.BHZ3_LEISTUNG_FESTBRENNOFEN = in;
+	return 0;
+}
+
+int print_can_0x1c10801a_BHZ3_LEISTUNG_FESTBRENNOFEN(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_LEISTUNG_FESTBRENNOFEN = (wire: %.0f)\n", (double)(o->can_0x1c10801a_BHZ3_LEISTUNG_FESTBRENNOFEN.BHZ3_LEISTUNG_FESTBRENNOFEN)));
+	return r;
+}
+
+static int pack_can_0x1c10801d_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c10801d_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE.BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c10801d_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c10801d_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c10801d_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE.BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE = x;
+	o->can_0x1c10801d_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE_rx = 1;
+	o->can_0x1c10801d_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c10801d_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c10801d_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE.BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c10801d_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c10801d_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE.BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE = in;
+	return 0;
+}
+
+int print_can_0x1c10801d_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE = (wire: %.0f)\n", (double)(o->can_0x1c10801d_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE.BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE)));
+	return r;
+}
+
+static int pack_can_0x1c10801e_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c10801e_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN.BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c10801e_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c10801e_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c10801e_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN.BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN = x;
+	o->can_0x1c10801e_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN_rx = 1;
+	o->can_0x1c10801e_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c10801e_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c10801e_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN.BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c10801e_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c10801e_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN.BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN = in;
+	return 0;
+}
+
+int print_can_0x1c10801e_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN = (wire: %.0f)\n", (double)(o->can_0x1c10801e_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN.BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN)));
+	return r;
+}
+
+static int pack_can_0x1c10801f_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c10801f_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c10801f_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c10801f_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c10801f_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE = x;
+	o->can_0x1c10801f_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE_rx = 1;
+	o->can_0x1c10801f_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c10801f_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c10801f_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c10801f_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c10801f_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE = in;
+	return 0;
+}
+
+int print_can_0x1c10801f_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE = (wire: %.0f)\n", (double)(o->can_0x1c10801f_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE)));
+	return r;
+}
+
+static int pack_can_0x1c108020_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c108020_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c108020_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c108020_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c108020_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE = x;
+	o->can_0x1c108020_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE_rx = 1;
+	o->can_0x1c108020_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c108020_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE(const can_obj_bhz3_h_t *o, int16_t *out) {
+	assert(o);
+	assert(out);
+	int16_t rval = (int16_t)(o->can_0x1c108020_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c108020_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE(can_obj_bhz3_h_t *o, int16_t in) {
+	assert(o);
+	o->can_0x1c108020_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE = in;
+	return 0;
+}
+
+int print_can_0x1c108020_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE = (wire: %.0f)\n", (double)(o->can_0x1c108020_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE)));
+	return r;
+}
+
+static int pack_can_0x1c10a411_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c10a411_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER.BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c10a411_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c10a411_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c10a411_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER.BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER = x;
+	o->can_0x1c10a411_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER_rx = 1;
+	o->can_0x1c10a411_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c10a411_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER(const can_obj_bhz3_h_t *o, int16_t *out) {
+	assert(o);
+	assert(out);
+	int16_t rval = (int16_t)(o->can_0x1c10a411_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER.BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c10a411_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER(can_obj_bhz3_h_t *o, int16_t in) {
+	assert(o);
+	o->can_0x1c10a411_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER.BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER = in;
+	return 0;
+}
+
+int print_can_0x1c10a411_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER = (wire: %.0f)\n", (double)(o->can_0x1c10a411_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER.BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER)));
+	return r;
+}
+
+static int pack_can_0x1c10a413_BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c10a413_BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS.BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c10a413_BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c10a413_BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c10a413_BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS.BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS = x;
+	o->can_0x1c10a413_BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS_rx = 1;
+	o->can_0x1c10a413_BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c10a413_BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS(const can_obj_bhz3_h_t *o, int16_t *out) {
+	assert(o);
+	assert(out);
+	int16_t rval = (int16_t)(o->can_0x1c10a413_BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS.BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c10a413_BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS(can_obj_bhz3_h_t *o, int16_t in) {
+	assert(o);
+	o->can_0x1c10a413_BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS.BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS = in;
+	return 0;
+}
+
+int print_can_0x1c10a413_BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS = (wire: %.0f)\n", (double)(o->can_0x1c10a413_BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS.BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS)));
+	return r;
+}
+
+static int pack_can_0x1c10c019_BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c10c019_BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM.BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c10c019_BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c10c019_BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c10c019_BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM.BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM = x;
+	o->can_0x1c10c019_BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM_rx = 1;
+	o->can_0x1c10c019_BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c10c019_BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM(const can_obj_bhz3_h_t *o, int16_t *out) {
+	assert(o);
+	assert(out);
+	int16_t rval = (int16_t)(o->can_0x1c10c019_BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM.BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c10c019_BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM(can_obj_bhz3_h_t *o, int16_t in) {
+	assert(o);
+	o->can_0x1c10c019_BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM.BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM = in;
+	return 0;
+}
+
+int print_can_0x1c10c019_BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM = (wire: %.0f)\n", (double)(o->can_0x1c10c019_BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM.BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM)));
+	return r;
+}
+
+static int pack_can_0x1c10c037_BHZ3_TEMPERATUR_WW_SOLL(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_TEMPERATUR_WW_SOLL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c10c037_BHZ3_TEMPERATUR_WW_SOLL.BHZ3_TEMPERATUR_WW_SOLL)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c10c037_BHZ3_TEMPERATUR_WW_SOLL_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c10c037_BHZ3_TEMPERATUR_WW_SOLL(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_TEMPERATUR_WW_SOLL: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c10c037_BHZ3_TEMPERATUR_WW_SOLL.BHZ3_TEMPERATUR_WW_SOLL = x;
+	o->can_0x1c10c037_BHZ3_TEMPERATUR_WW_SOLL_rx = 1;
+	o->can_0x1c10c037_BHZ3_TEMPERATUR_WW_SOLL_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c10c037_BHZ3_TEMPERATUR_WW_SOLL(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c10c037_BHZ3_TEMPERATUR_WW_SOLL.BHZ3_TEMPERATUR_WW_SOLL);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c10c037_BHZ3_TEMPERATUR_WW_SOLL(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c10c037_BHZ3_TEMPERATUR_WW_SOLL.BHZ3_TEMPERATUR_WW_SOLL = in;
+	return 0;
+}
+
+int print_can_0x1c10c037_BHZ3_TEMPERATUR_WW_SOLL(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_TEMPERATUR_WW_SOLL = (wire: %.0f)\n", (double)(o->can_0x1c10c037_BHZ3_TEMPERATUR_WW_SOLL.BHZ3_TEMPERATUR_WW_SOLL)));
+	return r;
+}
+
+static int pack_can_0x1c112006_BHZ3_VOLUMENSTROM_WW_SPEICHER(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_VOLUMENSTROM_WW_SPEICHER: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c112006_BHZ3_VOLUMENSTROM_WW_SPEICHER.BHZ3_VOLUMENSTROM_WW_SPEICHER)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c112006_BHZ3_VOLUMENSTROM_WW_SPEICHER_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c112006_BHZ3_VOLUMENSTROM_WW_SPEICHER(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_VOLUMENSTROM_WW_SPEICHER: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c112006_BHZ3_VOLUMENSTROM_WW_SPEICHER.BHZ3_VOLUMENSTROM_WW_SPEICHER = x;
+	o->can_0x1c112006_BHZ3_VOLUMENSTROM_WW_SPEICHER_rx = 1;
+	o->can_0x1c112006_BHZ3_VOLUMENSTROM_WW_SPEICHER_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c112006_BHZ3_VOLUMENSTROM_WW_SPEICHER(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c112006_BHZ3_VOLUMENSTROM_WW_SPEICHER.BHZ3_VOLUMENSTROM_WW_SPEICHER);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c112006_BHZ3_VOLUMENSTROM_WW_SPEICHER(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c112006_BHZ3_VOLUMENSTROM_WW_SPEICHER.BHZ3_VOLUMENSTROM_WW_SPEICHER = in;
+	return 0;
+}
+
+int print_can_0x1c112006_BHZ3_VOLUMENSTROM_WW_SPEICHER(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_VOLUMENSTROM_WW_SPEICHER = (wire: %.0f)\n", (double)(o->can_0x1c112006_BHZ3_VOLUMENSTROM_WW_SPEICHER.BHZ3_VOLUMENSTROM_WW_SPEICHER)));
+	return r;
+}
+
+static int pack_can_0x1c11200e_BHZ3_STATUS_HK1_ABSENKART(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_STATUS_HK1_ABSENKART: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c11200e_BHZ3_STATUS_HK1_ABSENKART.BHZ3_STATUS_HK1_ABSENKART)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c11200e_BHZ3_STATUS_HK1_ABSENKART_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c11200e_BHZ3_STATUS_HK1_ABSENKART(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_STATUS_HK1_ABSENKART: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c11200e_BHZ3_STATUS_HK1_ABSENKART.BHZ3_STATUS_HK1_ABSENKART = x;
+	o->can_0x1c11200e_BHZ3_STATUS_HK1_ABSENKART_rx = 1;
+	o->can_0x1c11200e_BHZ3_STATUS_HK1_ABSENKART_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c11200e_BHZ3_STATUS_HK1_ABSENKART(const can_obj_bhz3_h_t *o, int16_t *out) {
+	assert(o);
+	assert(out);
+	int16_t rval = (int16_t)(o->can_0x1c11200e_BHZ3_STATUS_HK1_ABSENKART.BHZ3_STATUS_HK1_ABSENKART);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c11200e_BHZ3_STATUS_HK1_ABSENKART(can_obj_bhz3_h_t *o, int16_t in) {
+	assert(o);
+	o->can_0x1c11200e_BHZ3_STATUS_HK1_ABSENKART.BHZ3_STATUS_HK1_ABSENKART = in;
+	return 0;
+}
+
+int print_can_0x1c11200e_BHZ3_STATUS_HK1_ABSENKART(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_STATUS_HK1_ABSENKART = (wire: %.0f)\n", (double)(o->can_0x1c11200e_BHZ3_STATUS_HK1_ABSENKART.BHZ3_STATUS_HK1_ABSENKART)));
+	return r;
+}
+
+static int pack_can_0x1c112013_BHZ3_STATUS_HK1_SOMMERBETRIEB(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_STATUS_HK1_SOMMERBETRIEB: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c112013_BHZ3_STATUS_HK1_SOMMERBETRIEB.BHZ3_STATUS_HK1_SOMMERBETRIEB)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c112013_BHZ3_STATUS_HK1_SOMMERBETRIEB_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c112013_BHZ3_STATUS_HK1_SOMMERBETRIEB(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_STATUS_HK1_SOMMERBETRIEB: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c112013_BHZ3_STATUS_HK1_SOMMERBETRIEB.BHZ3_STATUS_HK1_SOMMERBETRIEB = x;
+	o->can_0x1c112013_BHZ3_STATUS_HK1_SOMMERBETRIEB_rx = 1;
+	o->can_0x1c112013_BHZ3_STATUS_HK1_SOMMERBETRIEB_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c112013_BHZ3_STATUS_HK1_SOMMERBETRIEB(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c112013_BHZ3_STATUS_HK1_SOMMERBETRIEB.BHZ3_STATUS_HK1_SOMMERBETRIEB);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c112013_BHZ3_STATUS_HK1_SOMMERBETRIEB(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c112013_BHZ3_STATUS_HK1_SOMMERBETRIEB.BHZ3_STATUS_HK1_SOMMERBETRIEB = in;
+	return 0;
+}
+
+int print_can_0x1c112013_BHZ3_STATUS_HK1_SOMMERBETRIEB(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_STATUS_HK1_SOMMERBETRIEB = (wire: %.0f)\n", (double)(o->can_0x1c112013_BHZ3_STATUS_HK1_SOMMERBETRIEB.BHZ3_STATUS_HK1_SOMMERBETRIEB)));
+	return r;
+}
+
+static int pack_can_0x1c11201e_BHZ3_STATUS_HK1_DAUERBETRIEB(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_STATUS_HK1_DAUERBETRIEB: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c11201e_BHZ3_STATUS_HK1_DAUERBETRIEB.BHZ3_STATUS_HK1_DAUERBETRIEB)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c11201e_BHZ3_STATUS_HK1_DAUERBETRIEB_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c11201e_BHZ3_STATUS_HK1_DAUERBETRIEB(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_STATUS_HK1_DAUERBETRIEB: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c11201e_BHZ3_STATUS_HK1_DAUERBETRIEB.BHZ3_STATUS_HK1_DAUERBETRIEB = x;
+	o->can_0x1c11201e_BHZ3_STATUS_HK1_DAUERBETRIEB_rx = 1;
+	o->can_0x1c11201e_BHZ3_STATUS_HK1_DAUERBETRIEB_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c11201e_BHZ3_STATUS_HK1_DAUERBETRIEB(const can_obj_bhz3_h_t *o, int16_t *out) {
+	assert(o);
+	assert(out);
+	int16_t rval = (int16_t)(o->can_0x1c11201e_BHZ3_STATUS_HK1_DAUERBETRIEB.BHZ3_STATUS_HK1_DAUERBETRIEB);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c11201e_BHZ3_STATUS_HK1_DAUERBETRIEB(can_obj_bhz3_h_t *o, int16_t in) {
+	assert(o);
+	o->can_0x1c11201e_BHZ3_STATUS_HK1_DAUERBETRIEB.BHZ3_STATUS_HK1_DAUERBETRIEB = in;
+	return 0;
+}
+
+int print_can_0x1c11201e_BHZ3_STATUS_HK1_DAUERBETRIEB(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_STATUS_HK1_DAUERBETRIEB = (wire: %.0f)\n", (double)(o->can_0x1c11201e_BHZ3_STATUS_HK1_DAUERBETRIEB.BHZ3_STATUS_HK1_DAUERBETRIEB)));
+	return r;
+}
+
+static int pack_can_0x1c11201f_BHZ3_STATUS_HK1_ABWESENHEITSZEIT(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_STATUS_HK1_ABWESENHEITSZEIT: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c11201f_BHZ3_STATUS_HK1_ABWESENHEITSZEIT.BHZ3_STATUS_HK1_ABWESENHEITSZEIT)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c11201f_BHZ3_STATUS_HK1_ABWESENHEITSZEIT_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c11201f_BHZ3_STATUS_HK1_ABWESENHEITSZEIT(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_STATUS_HK1_ABWESENHEITSZEIT: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c11201f_BHZ3_STATUS_HK1_ABWESENHEITSZEIT.BHZ3_STATUS_HK1_ABWESENHEITSZEIT = x;
+	o->can_0x1c11201f_BHZ3_STATUS_HK1_ABWESENHEITSZEIT_rx = 1;
+	o->can_0x1c11201f_BHZ3_STATUS_HK1_ABWESENHEITSZEIT_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c11201f_BHZ3_STATUS_HK1_ABWESENHEITSZEIT(const can_obj_bhz3_h_t *o, int16_t *out) {
+	assert(o);
+	assert(out);
+	int16_t rval = (int16_t)(o->can_0x1c11201f_BHZ3_STATUS_HK1_ABWESENHEITSZEIT.BHZ3_STATUS_HK1_ABWESENHEITSZEIT);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c11201f_BHZ3_STATUS_HK1_ABWESENHEITSZEIT(can_obj_bhz3_h_t *o, int16_t in) {
+	assert(o);
+	o->can_0x1c11201f_BHZ3_STATUS_HK1_ABWESENHEITSZEIT.BHZ3_STATUS_HK1_ABWESENHEITSZEIT = in;
+	return 0;
+}
+
+int print_can_0x1c11201f_BHZ3_STATUS_HK1_ABWESENHEITSZEIT(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_STATUS_HK1_ABWESENHEITSZEIT = (wire: %.0f)\n", (double)(o->can_0x1c11201f_BHZ3_STATUS_HK1_ABWESENHEITSZEIT.BHZ3_STATUS_HK1_ABWESENHEITSZEIT)));
+	return r;
+}
+
+static int pack_can_0x1c112022_BHZ3_STATUS_HK1_PROGRAMM(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_STATUS_HK1_PROGRAMM: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c112022_BHZ3_STATUS_HK1_PROGRAMM.BHZ3_STATUS_HK1_PROGRAMM)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c112022_BHZ3_STATUS_HK1_PROGRAMM_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c112022_BHZ3_STATUS_HK1_PROGRAMM(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_STATUS_HK1_PROGRAMM: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c112022_BHZ3_STATUS_HK1_PROGRAMM.BHZ3_STATUS_HK1_PROGRAMM = x;
+	o->can_0x1c112022_BHZ3_STATUS_HK1_PROGRAMM_rx = 1;
+	o->can_0x1c112022_BHZ3_STATUS_HK1_PROGRAMM_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c112022_BHZ3_STATUS_HK1_PROGRAMM(const can_obj_bhz3_h_t *o, int16_t *out) {
+	assert(o);
+	assert(out);
+	int16_t rval = (int16_t)(o->can_0x1c112022_BHZ3_STATUS_HK1_PROGRAMM.BHZ3_STATUS_HK1_PROGRAMM);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c112022_BHZ3_STATUS_HK1_PROGRAMM(can_obj_bhz3_h_t *o, int16_t in) {
+	assert(o);
+	o->can_0x1c112022_BHZ3_STATUS_HK1_PROGRAMM.BHZ3_STATUS_HK1_PROGRAMM = in;
+	return 0;
+}
+
+int print_can_0x1c112022_BHZ3_STATUS_HK1_PROGRAMM(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_STATUS_HK1_PROGRAMM = (wire: %.0f)\n", (double)(o->can_0x1c112022_BHZ3_STATUS_HK1_PROGRAMM.BHZ3_STATUS_HK1_PROGRAMM)));
+	return r;
+}
+
+static int pack_can_0x1c112024_BHZ3_STATUS_HK1_WAERMER_KAELTER(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_STATUS_HK1_WAERMER_KAELTER: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c112024_BHZ3_STATUS_HK1_WAERMER_KAELTER.BHZ3_STATUS_HK1_WAERMER_KAELTER)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c112024_BHZ3_STATUS_HK1_WAERMER_KAELTER_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c112024_BHZ3_STATUS_HK1_WAERMER_KAELTER(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_STATUS_HK1_WAERMER_KAELTER: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c112024_BHZ3_STATUS_HK1_WAERMER_KAELTER.BHZ3_STATUS_HK1_WAERMER_KAELTER = x;
+	o->can_0x1c112024_BHZ3_STATUS_HK1_WAERMER_KAELTER_rx = 1;
+	o->can_0x1c112024_BHZ3_STATUS_HK1_WAERMER_KAELTER_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c112024_BHZ3_STATUS_HK1_WAERMER_KAELTER(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c112024_BHZ3_STATUS_HK1_WAERMER_KAELTER.BHZ3_STATUS_HK1_WAERMER_KAELTER);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c112024_BHZ3_STATUS_HK1_WAERMER_KAELTER(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c112024_BHZ3_STATUS_HK1_WAERMER_KAELTER.BHZ3_STATUS_HK1_WAERMER_KAELTER = in;
+	return 0;
+}
+
+int print_can_0x1c112024_BHZ3_STATUS_HK1_WAERMER_KAELTER(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_STATUS_HK1_WAERMER_KAELTER = (wire: %.0f)\n", (double)(o->can_0x1c112024_BHZ3_STATUS_HK1_WAERMER_KAELTER.BHZ3_STATUS_HK1_WAERMER_KAELTER)));
+	return r;
+}
+
+static int pack_can_0x1c114006_BHZ3_LEISTUNG_ZUSATZHEIZUNG(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_LEISTUNG_ZUSATZHEIZUNG: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c114006_BHZ3_LEISTUNG_ZUSATZHEIZUNG.BHZ3_LEISTUNG_ZUSATZHEIZUNG)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c114006_BHZ3_LEISTUNG_ZUSATZHEIZUNG_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c114006_BHZ3_LEISTUNG_ZUSATZHEIZUNG(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_LEISTUNG_ZUSATZHEIZUNG: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c114006_BHZ3_LEISTUNG_ZUSATZHEIZUNG.BHZ3_LEISTUNG_ZUSATZHEIZUNG = x;
+	o->can_0x1c114006_BHZ3_LEISTUNG_ZUSATZHEIZUNG_rx = 1;
+	o->can_0x1c114006_BHZ3_LEISTUNG_ZUSATZHEIZUNG_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c114006_BHZ3_LEISTUNG_ZUSATZHEIZUNG(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c114006_BHZ3_LEISTUNG_ZUSATZHEIZUNG.BHZ3_LEISTUNG_ZUSATZHEIZUNG);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c114006_BHZ3_LEISTUNG_ZUSATZHEIZUNG(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c114006_BHZ3_LEISTUNG_ZUSATZHEIZUNG.BHZ3_LEISTUNG_ZUSATZHEIZUNG = in;
+	return 0;
+}
+
+int print_can_0x1c114006_BHZ3_LEISTUNG_ZUSATZHEIZUNG(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_LEISTUNG_ZUSATZHEIZUNG = (wire: %.0f)\n", (double)(o->can_0x1c114006_BHZ3_LEISTUNG_ZUSATZHEIZUNG.BHZ3_LEISTUNG_ZUSATZHEIZUNG)));
+	return r;
+}
+
+static int pack_can_0x1c114009_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c114009_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE.BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c114009_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c114009_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c114009_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE.BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE = x;
+	o->can_0x1c114009_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE_rx = 1;
+	o->can_0x1c114009_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c114009_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c114009_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE.BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c114009_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c114009_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE.BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE = in;
+	return 0;
+}
+
+int print_can_0x1c114009_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE = (wire: %.0f)\n", (double)(o->can_0x1c114009_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE.BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE)));
+	return r;
+}
+
+static int pack_can_0x1c11400a_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c11400a_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN.BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c11400a_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c11400a_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c11400a_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN.BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN = x;
+	o->can_0x1c11400a_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN_rx = 1;
+	o->can_0x1c11400a_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c11400a_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c11400a_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN.BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c11400a_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c11400a_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN.BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN = in;
+	return 0;
+}
+
+int print_can_0x1c11400a_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN = (wire: %.0f)\n", (double)(o->can_0x1c11400a_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN.BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN)));
+	return r;
+}
+
+static int pack_can_0x1c11400b_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c11400b_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c11400b_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c11400b_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c11400b_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE = x;
+	o->can_0x1c11400b_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE_rx = 1;
+	o->can_0x1c11400b_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c11400b_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c11400b_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c11400b_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c11400b_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE = in;
+	return 0;
+}
+
+int print_can_0x1c11400b_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE = (wire: %.0f)\n", (double)(o->can_0x1c11400b_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE)));
+	return r;
+}
+
+static int pack_can_0x1c11400c_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c11400c_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c11400c_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c11400c_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c11400c_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE = x;
+	o->can_0x1c11400c_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE_rx = 1;
+	o->can_0x1c11400c_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c11400c_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE(const can_obj_bhz3_h_t *o, int16_t *out) {
+	assert(o);
+	assert(out);
+	int16_t rval = (int16_t)(o->can_0x1c11400c_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c11400c_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE(can_obj_bhz3_h_t *o, int16_t in) {
+	assert(o);
+	o->can_0x1c11400c_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE = in;
+	return 0;
+}
+
+int print_can_0x1c11400c_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE = (wire: %.0f)\n", (double)(o->can_0x1c11400c_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE)));
+	return r;
+}
+
+static int pack_can_0x1c114406_BHZ3_LEISTUNG_HK1(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_LEISTUNG_HK1: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c114406_BHZ3_LEISTUNG_HK1.BHZ3_LEISTUNG_HK1)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c114406_BHZ3_LEISTUNG_HK1_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c114406_BHZ3_LEISTUNG_HK1(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_LEISTUNG_HK1: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c114406_BHZ3_LEISTUNG_HK1.BHZ3_LEISTUNG_HK1 = x;
+	o->can_0x1c114406_BHZ3_LEISTUNG_HK1_rx = 1;
+	o->can_0x1c114406_BHZ3_LEISTUNG_HK1_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c114406_BHZ3_LEISTUNG_HK1(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c114406_BHZ3_LEISTUNG_HK1.BHZ3_LEISTUNG_HK1);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c114406_BHZ3_LEISTUNG_HK1(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c114406_BHZ3_LEISTUNG_HK1.BHZ3_LEISTUNG_HK1 = in;
+	return 0;
+}
+
+int print_can_0x1c114406_BHZ3_LEISTUNG_HK1(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_LEISTUNG_HK1 = (wire: %.0f)\n", (double)(o->can_0x1c114406_BHZ3_LEISTUNG_HK1.BHZ3_LEISTUNG_HK1)));
+	return r;
+}
+
+static int pack_can_0x1c114409_BHZ3_GESAMTLEISTUNG_HK1_HEUTE(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_GESAMTLEISTUNG_HK1_HEUTE: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c114409_BHZ3_GESAMTLEISTUNG_HK1_HEUTE.BHZ3_GESAMTLEISTUNG_HK1_HEUTE)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c114409_BHZ3_GESAMTLEISTUNG_HK1_HEUTE_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c114409_BHZ3_GESAMTLEISTUNG_HK1_HEUTE(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_GESAMTLEISTUNG_HK1_HEUTE: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c114409_BHZ3_GESAMTLEISTUNG_HK1_HEUTE.BHZ3_GESAMTLEISTUNG_HK1_HEUTE = x;
+	o->can_0x1c114409_BHZ3_GESAMTLEISTUNG_HK1_HEUTE_rx = 1;
+	o->can_0x1c114409_BHZ3_GESAMTLEISTUNG_HK1_HEUTE_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c114409_BHZ3_GESAMTLEISTUNG_HK1_HEUTE(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c114409_BHZ3_GESAMTLEISTUNG_HK1_HEUTE.BHZ3_GESAMTLEISTUNG_HK1_HEUTE);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c114409_BHZ3_GESAMTLEISTUNG_HK1_HEUTE(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c114409_BHZ3_GESAMTLEISTUNG_HK1_HEUTE.BHZ3_GESAMTLEISTUNG_HK1_HEUTE = in;
+	return 0;
+}
+
+int print_can_0x1c114409_BHZ3_GESAMTLEISTUNG_HK1_HEUTE(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_GESAMTLEISTUNG_HK1_HEUTE = (wire: %.0f)\n", (double)(o->can_0x1c114409_BHZ3_GESAMTLEISTUNG_HK1_HEUTE.BHZ3_GESAMTLEISTUNG_HK1_HEUTE)));
+	return r;
+}
+
+static int pack_can_0x1c11440a_BHZ3_GESAMTLEISTUNG_HK1_GESTERN(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_GESAMTLEISTUNG_HK1_GESTERN: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c11440a_BHZ3_GESAMTLEISTUNG_HK1_GESTERN.BHZ3_GESAMTLEISTUNG_HK1_GESTERN)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c11440a_BHZ3_GESAMTLEISTUNG_HK1_GESTERN_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c11440a_BHZ3_GESAMTLEISTUNG_HK1_GESTERN(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_GESAMTLEISTUNG_HK1_GESTERN: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c11440a_BHZ3_GESAMTLEISTUNG_HK1_GESTERN.BHZ3_GESAMTLEISTUNG_HK1_GESTERN = x;
+	o->can_0x1c11440a_BHZ3_GESAMTLEISTUNG_HK1_GESTERN_rx = 1;
+	o->can_0x1c11440a_BHZ3_GESAMTLEISTUNG_HK1_GESTERN_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c11440a_BHZ3_GESAMTLEISTUNG_HK1_GESTERN(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c11440a_BHZ3_GESAMTLEISTUNG_HK1_GESTERN.BHZ3_GESAMTLEISTUNG_HK1_GESTERN);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c11440a_BHZ3_GESAMTLEISTUNG_HK1_GESTERN(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c11440a_BHZ3_GESAMTLEISTUNG_HK1_GESTERN.BHZ3_GESAMTLEISTUNG_HK1_GESTERN = in;
+	return 0;
+}
+
+int print_can_0x1c11440a_BHZ3_GESAMTLEISTUNG_HK1_GESTERN(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_GESAMTLEISTUNG_HK1_GESTERN = (wire: %.0f)\n", (double)(o->can_0x1c11440a_BHZ3_GESAMTLEISTUNG_HK1_GESTERN.BHZ3_GESAMTLEISTUNG_HK1_GESTERN)));
+	return r;
+}
+
+static int pack_can_0x1c11440b_BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c11440b_BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c11440b_BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c11440b_BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c11440b_BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE = x;
+	o->can_0x1c11440b_BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE_rx = 1;
+	o->can_0x1c11440b_BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c11440b_BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c11440b_BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c11440b_BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c11440b_BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE = in;
+	return 0;
+}
+
+int print_can_0x1c11440b_BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE = (wire: %.0f)\n", (double)(o->can_0x1c11440b_BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE)));
+	return r;
+}
+
+static int pack_can_0x1c11440c_BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c11440c_BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c11440c_BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c11440c_BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c11440c_BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE = x;
+	o->can_0x1c11440c_BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE_rx = 1;
+	o->can_0x1c11440c_BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c11440c_BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE(const can_obj_bhz3_h_t *o, int16_t *out) {
+	assert(o);
+	assert(out);
+	int16_t rval = (int16_t)(o->can_0x1c11440c_BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c11440c_BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE(can_obj_bhz3_h_t *o, int16_t in) {
+	assert(o);
+	o->can_0x1c11440c_BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE = in;
+	return 0;
+}
+
+int print_can_0x1c11440c_BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE = (wire: %.0f)\n", (double)(o->can_0x1c11440c_BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE)));
+	return r;
+}
+
+static int pack_can_0x1c114c06_BHZ3_LEISTUNG_WW(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_LEISTUNG_WW: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c114c06_BHZ3_LEISTUNG_WW.BHZ3_LEISTUNG_WW)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c114c06_BHZ3_LEISTUNG_WW_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c114c06_BHZ3_LEISTUNG_WW(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_LEISTUNG_WW: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c114c06_BHZ3_LEISTUNG_WW.BHZ3_LEISTUNG_WW = x;
+	o->can_0x1c114c06_BHZ3_LEISTUNG_WW_rx = 1;
+	o->can_0x1c114c06_BHZ3_LEISTUNG_WW_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c114c06_BHZ3_LEISTUNG_WW(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c114c06_BHZ3_LEISTUNG_WW.BHZ3_LEISTUNG_WW);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c114c06_BHZ3_LEISTUNG_WW(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c114c06_BHZ3_LEISTUNG_WW.BHZ3_LEISTUNG_WW = in;
+	return 0;
+}
+
+int print_can_0x1c114c06_BHZ3_LEISTUNG_WW(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_LEISTUNG_WW = (wire: %.0f)\n", (double)(o->can_0x1c114c06_BHZ3_LEISTUNG_WW.BHZ3_LEISTUNG_WW)));
+	return r;
+}
+
+static int pack_can_0x1c114c09_BHZ3_GESAMTLEISTUNG_WW_HEUTE(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_GESAMTLEISTUNG_WW_HEUTE: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c114c09_BHZ3_GESAMTLEISTUNG_WW_HEUTE.BHZ3_GESAMTLEISTUNG_WW_HEUTE)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c114c09_BHZ3_GESAMTLEISTUNG_WW_HEUTE_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c114c09_BHZ3_GESAMTLEISTUNG_WW_HEUTE(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_GESAMTLEISTUNG_WW_HEUTE: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c114c09_BHZ3_GESAMTLEISTUNG_WW_HEUTE.BHZ3_GESAMTLEISTUNG_WW_HEUTE = x;
+	o->can_0x1c114c09_BHZ3_GESAMTLEISTUNG_WW_HEUTE_rx = 1;
+	o->can_0x1c114c09_BHZ3_GESAMTLEISTUNG_WW_HEUTE_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c114c09_BHZ3_GESAMTLEISTUNG_WW_HEUTE(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c114c09_BHZ3_GESAMTLEISTUNG_WW_HEUTE.BHZ3_GESAMTLEISTUNG_WW_HEUTE);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c114c09_BHZ3_GESAMTLEISTUNG_WW_HEUTE(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c114c09_BHZ3_GESAMTLEISTUNG_WW_HEUTE.BHZ3_GESAMTLEISTUNG_WW_HEUTE = in;
+	return 0;
+}
+
+int print_can_0x1c114c09_BHZ3_GESAMTLEISTUNG_WW_HEUTE(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_GESAMTLEISTUNG_WW_HEUTE = (wire: %.0f)\n", (double)(o->can_0x1c114c09_BHZ3_GESAMTLEISTUNG_WW_HEUTE.BHZ3_GESAMTLEISTUNG_WW_HEUTE)));
+	return r;
+}
+
+static int pack_can_0x1c114c0a_BHZ3_GESAMTLEISTUNG_WW_GESTERN(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_GESAMTLEISTUNG_WW_GESTERN: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c114c0a_BHZ3_GESAMTLEISTUNG_WW_GESTERN.BHZ3_GESAMTLEISTUNG_WW_GESTERN)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c114c0a_BHZ3_GESAMTLEISTUNG_WW_GESTERN_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c114c0a_BHZ3_GESAMTLEISTUNG_WW_GESTERN(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_GESAMTLEISTUNG_WW_GESTERN: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c114c0a_BHZ3_GESAMTLEISTUNG_WW_GESTERN.BHZ3_GESAMTLEISTUNG_WW_GESTERN = x;
+	o->can_0x1c114c0a_BHZ3_GESAMTLEISTUNG_WW_GESTERN_rx = 1;
+	o->can_0x1c114c0a_BHZ3_GESAMTLEISTUNG_WW_GESTERN_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c114c0a_BHZ3_GESAMTLEISTUNG_WW_GESTERN(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c114c0a_BHZ3_GESAMTLEISTUNG_WW_GESTERN.BHZ3_GESAMTLEISTUNG_WW_GESTERN);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c114c0a_BHZ3_GESAMTLEISTUNG_WW_GESTERN(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c114c0a_BHZ3_GESAMTLEISTUNG_WW_GESTERN.BHZ3_GESAMTLEISTUNG_WW_GESTERN = in;
+	return 0;
+}
+
+int print_can_0x1c114c0a_BHZ3_GESAMTLEISTUNG_WW_GESTERN(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_GESAMTLEISTUNG_WW_GESTERN = (wire: %.0f)\n", (double)(o->can_0x1c114c0a_BHZ3_GESAMTLEISTUNG_WW_GESTERN.BHZ3_GESAMTLEISTUNG_WW_GESTERN)));
+	return r;
+}
+
+static int pack_can_0x1c114c0b_BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c114c0b_BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c114c0b_BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c114c0b_BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c114c0b_BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE = x;
+	o->can_0x1c114c0b_BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE_rx = 1;
+	o->can_0x1c114c0b_BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c114c0b_BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c114c0b_BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c114c0b_BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c114c0b_BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE = in;
+	return 0;
+}
+
+int print_can_0x1c114c0b_BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE = (wire: %.0f)\n", (double)(o->can_0x1c114c0b_BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE)));
+	return r;
+}
+
+static int pack_can_0x1c114c0c_BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c114c0c_BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c114c0c_BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c114c0c_BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c114c0c_BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE = x;
+	o->can_0x1c114c0c_BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE_rx = 1;
+	o->can_0x1c114c0c_BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c114c0c_BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE(const can_obj_bhz3_h_t *o, int16_t *out) {
+	assert(o);
+	assert(out);
+	int16_t rval = (int16_t)(o->can_0x1c114c0c_BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c114c0c_BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE(can_obj_bhz3_h_t *o, int16_t in) {
+	assert(o);
+	o->can_0x1c114c0c_BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE = in;
+	return 0;
+}
+
+int print_can_0x1c114c0c_BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE = (wire: %.0f)\n", (double)(o->can_0x1c114c0c_BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE)));
+	return r;
+}
+
+static int pack_can_0x1c115006_BHZ3_LEISTUNG_SOLAR(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_LEISTUNG_SOLAR: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c115006_BHZ3_LEISTUNG_SOLAR.BHZ3_LEISTUNG_SOLAR)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c115006_BHZ3_LEISTUNG_SOLAR_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c115006_BHZ3_LEISTUNG_SOLAR(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_LEISTUNG_SOLAR: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c115006_BHZ3_LEISTUNG_SOLAR.BHZ3_LEISTUNG_SOLAR = x;
+	o->can_0x1c115006_BHZ3_LEISTUNG_SOLAR_rx = 1;
+	o->can_0x1c115006_BHZ3_LEISTUNG_SOLAR_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c115006_BHZ3_LEISTUNG_SOLAR(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c115006_BHZ3_LEISTUNG_SOLAR.BHZ3_LEISTUNG_SOLAR);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c115006_BHZ3_LEISTUNG_SOLAR(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c115006_BHZ3_LEISTUNG_SOLAR.BHZ3_LEISTUNG_SOLAR = in;
+	return 0;
+}
+
+int print_can_0x1c115006_BHZ3_LEISTUNG_SOLAR(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_LEISTUNG_SOLAR = (wire: %.0f)\n", (double)(o->can_0x1c115006_BHZ3_LEISTUNG_SOLAR.BHZ3_LEISTUNG_SOLAR)));
+	return r;
+}
+
+static int pack_can_0x1c115009_BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c115009_BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE.BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c115009_BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c115009_BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c115009_BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE.BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE = x;
+	o->can_0x1c115009_BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE_rx = 1;
+	o->can_0x1c115009_BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c115009_BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c115009_BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE.BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c115009_BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c115009_BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE.BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE = in;
+	return 0;
+}
+
+int print_can_0x1c115009_BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE = (wire: %.0f)\n", (double)(o->can_0x1c115009_BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE.BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE)));
+	return r;
+}
+
+static int pack_can_0x1c11500a_BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c11500a_BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN.BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c11500a_BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c11500a_BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c11500a_BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN.BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN = x;
+	o->can_0x1c11500a_BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN_rx = 1;
+	o->can_0x1c11500a_BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c11500a_BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c11500a_BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN.BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c11500a_BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c11500a_BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN.BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN = in;
+	return 0;
+}
+
+int print_can_0x1c11500a_BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN = (wire: %.0f)\n", (double)(o->can_0x1c11500a_BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN.BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN)));
+	return r;
+}
+
+static int pack_can_0x1c11500b_BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c11500b_BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c11500b_BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c11500b_BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE: start-bit 15, length 16, endianess motorola, scaling 0.1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c11500b_BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE = x;
+	o->can_0x1c11500b_BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE_rx = 1;
+	o->can_0x1c11500b_BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c11500b_BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE(const can_obj_bhz3_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x1c11500b_BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE);
+	rval *= 0.1;
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c11500b_BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE(can_obj_bhz3_h_t *o, double in) {
+	assert(o);
+	in *= 10;
+	o->can_0x1c11500b_BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE = in;
+	return 0;
+}
+
+int print_can_0x1c11500b_BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE = (wire: %.0f)\n", (double)(o->can_0x1c11500b_BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE)));
+	return r;
+}
+
+static int pack_can_0x1c11500c_BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE(can_obj_bhz3_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t m = 0;
+	/* BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = ((uint16_t)(o->can_0x1c11500c_BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE)) & 0xffff;
+	x <<= 40; 
+	m |= x;
+	*data = reverse_byte_order(m);
+	o->can_0x1c11500c_BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x1c11500c_BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE(can_obj_bhz3_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t m = reverse_byte_order(data);
+	if (dlc < 4)
+		return -1;
+	/* BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE: start-bit 15, length 16, endianess motorola, scaling 1, offset 0 */
+	x = (m >> 40) & 0xffff;
+	o->can_0x1c11500c_BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE = x;
+	o->can_0x1c11500c_BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE_rx = 1;
+	o->can_0x1c11500c_BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x1c11500c_BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE(const can_obj_bhz3_h_t *o, int16_t *out) {
+	assert(o);
+	assert(out);
+	int16_t rval = (int16_t)(o->can_0x1c11500c_BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x1c11500c_BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE(can_obj_bhz3_h_t *o, int16_t in) {
+	assert(o);
+	o->can_0x1c11500c_BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE = in;
+	return 0;
+}
+
+int print_can_0x1c11500c_BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE(const can_obj_bhz3_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE = (wire: %.0f)\n", (double)(o->can_0x1c11500c_BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE.BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE)));
+	return r;
+}
+
 int unpack_message(can_obj_bhz3_h_t *o, const unsigned long id, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
 	assert(o);
 	assert(id < (1ul << 29)); /* 29-bit CAN ID is largest possible */
 	assert(dlc <= 8);         /* Maximum of 8 bytes in a CAN packet */
 	switch (id) {
 	case 0x1c104000: return unpack_can_0x1c104000_BHZ3_VOLUMENSTROM_SOLAR(o, data, dlc, time_stamp);
+	case 0x1c104001: return unpack_can_0x1c104001_BHZ3_VOLUMENSTROM_WW(o, data, dlc, time_stamp);
+	case 0x1c104003: return unpack_can_0x1c104003_BHZ3_VOLUMENSTROM_FESTBRENNOFEN(o, data, dlc, time_stamp);
+	case 0x1c104004: return unpack_can_0x1c104004_BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG(o, data, dlc, time_stamp);
+	case 0x1c104005: return unpack_can_0x1c104005_BHZ3_DRUCK_PUFFER(o, data, dlc, time_stamp);
+	case 0x1c104006: return unpack_can_0x1c104006_BHZ3_VOLUMENSTROM_HK1(o, data, dlc, time_stamp);
+	case 0x1c104009: return unpack_can_0x1c104009_BHZ3_TEMPERATUR_HK1_VL(o, data, dlc, time_stamp);
+	case 0x1c10400a: return unpack_can_0x1c10400a_BHZ3_TEMPERATUR_HK2_VL(o, data, dlc, time_stamp);
+	case 0x1c10400b: return unpack_can_0x1c10400b_BHZ3_TEMPERATUR_PUFFER_OBEN(o, data, dlc, time_stamp);
+	case 0x1c10400c: return unpack_can_0x1c10400c_BHZ3_TEMPERATUR_PUFFER_MITTE(o, data, dlc, time_stamp);
+	case 0x1c10400d: return unpack_can_0x1c10400d_BHZ3_TEMPERATUR_PUFFER_UNTEN(o, data, dlc, time_stamp);
+	case 0x1c10400e: return unpack_can_0x1c10400e_BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER(o, data, dlc, time_stamp);
+	case 0x1c10400f: return unpack_can_0x1c10400f_BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR(o, data, dlc, time_stamp);
+	case 0x1c104010: return unpack_can_0x1c104010_BHZ3_TEMPERATUR_SOLAR_RL(o, data, dlc, time_stamp);
+	case 0x1c104012: return unpack_can_0x1c104012_BHZ3_TEMPERATUR_WW_ZIRKULATION(o, data, dlc, time_stamp);
+	case 0x1c104013: return unpack_can_0x1c104013_BHZ3_TEMPERATUR_WETTER(o, data, dlc, time_stamp);
+	case 0x1c104014: return unpack_can_0x1c104014_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR(o, data, dlc, time_stamp);
+	case 0x1c104015: return unpack_can_0x1c104015_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL(o, data, dlc, time_stamp);
+	case 0x1c104016: return unpack_can_0x1c104016_BHZ3_TEMPERATUR_SOLAR_SEK_RL(o, data, dlc, time_stamp);
+	case 0x1c104019: return unpack_can_0x1c104019_BHZ3_TEMPERATUR_SOLAR_PRIM_VL(o, data, dlc, time_stamp);
+	case 0x1c10401b: return unpack_can_0x1c10401b_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL(o, data, dlc, time_stamp);
+	case 0x1c10401c: return unpack_can_0x1c10401c_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL(o, data, dlc, time_stamp);
+	case 0x1c10401e: return unpack_can_0x1c10401e_BHZ3_TEMPERATUR_HK1_RL(o, data, dlc, time_stamp);
+	case 0x1c10401f: return unpack_can_0x1c10401f_BHZ3_TEMPERATUR_HK2_RL(o, data, dlc, time_stamp);
+	case 0x1c104020: return unpack_can_0x1c104020_BHZ3_TEMPERATUR_WW_PRIM_VL(o, data, dlc, time_stamp);
+	case 0x1c104021: return unpack_can_0x1c104021_BHZ3_TEMPERATUR_WW_PRIM_RL(o, data, dlc, time_stamp);
+	case 0x1c104022: return unpack_can_0x1c104022_BHZ3_TEMPERATUR_WW_IST(o, data, dlc, time_stamp);
+	case 0x1c106002: return unpack_can_0x1c106002_BHZ3_UNKLAHR_WW(o, data, dlc, time_stamp);
+	case 0x1c106008: return unpack_can_0x1c106008_BHZ3_STATUS_HK1_EIN_AUS(o, data, dlc, time_stamp);
+	case 0x1c10600a: return unpack_can_0x1c10600a_BHZ3_STATUS_HK1_AUS_EIN(o, data, dlc, time_stamp);
+	case 0x1c106013: return unpack_can_0x1c106013_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV(o, data, dlc, time_stamp);
+	case 0x1c10801a: return unpack_can_0x1c10801a_BHZ3_LEISTUNG_FESTBRENNOFEN(o, data, dlc, time_stamp);
+	case 0x1c10801d: return unpack_can_0x1c10801d_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE(o, data, dlc, time_stamp);
+	case 0x1c10801e: return unpack_can_0x1c10801e_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN(o, data, dlc, time_stamp);
+	case 0x1c10801f: return unpack_can_0x1c10801f_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE(o, data, dlc, time_stamp);
+	case 0x1c108020: return unpack_can_0x1c108020_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE(o, data, dlc, time_stamp);
+	case 0x1c10a411: return unpack_can_0x1c10a411_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER(o, data, dlc, time_stamp);
+	case 0x1c10a413: return unpack_can_0x1c10a413_BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS(o, data, dlc, time_stamp);
+	case 0x1c10c019: return unpack_can_0x1c10c019_BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM(o, data, dlc, time_stamp);
+	case 0x1c10c037: return unpack_can_0x1c10c037_BHZ3_TEMPERATUR_WW_SOLL(o, data, dlc, time_stamp);
+	case 0x1c112006: return unpack_can_0x1c112006_BHZ3_VOLUMENSTROM_WW_SPEICHER(o, data, dlc, time_stamp);
+	case 0x1c11200e: return unpack_can_0x1c11200e_BHZ3_STATUS_HK1_ABSENKART(o, data, dlc, time_stamp);
+	case 0x1c112013: return unpack_can_0x1c112013_BHZ3_STATUS_HK1_SOMMERBETRIEB(o, data, dlc, time_stamp);
+	case 0x1c11201e: return unpack_can_0x1c11201e_BHZ3_STATUS_HK1_DAUERBETRIEB(o, data, dlc, time_stamp);
+	case 0x1c11201f: return unpack_can_0x1c11201f_BHZ3_STATUS_HK1_ABWESENHEITSZEIT(o, data, dlc, time_stamp);
+	case 0x1c112022: return unpack_can_0x1c112022_BHZ3_STATUS_HK1_PROGRAMM(o, data, dlc, time_stamp);
+	case 0x1c112024: return unpack_can_0x1c112024_BHZ3_STATUS_HK1_WAERMER_KAELTER(o, data, dlc, time_stamp);
+	case 0x1c114006: return unpack_can_0x1c114006_BHZ3_LEISTUNG_ZUSATZHEIZUNG(o, data, dlc, time_stamp);
+	case 0x1c114009: return unpack_can_0x1c114009_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE(o, data, dlc, time_stamp);
+	case 0x1c11400a: return unpack_can_0x1c11400a_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN(o, data, dlc, time_stamp);
+	case 0x1c11400b: return unpack_can_0x1c11400b_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE(o, data, dlc, time_stamp);
+	case 0x1c11400c: return unpack_can_0x1c11400c_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE(o, data, dlc, time_stamp);
+	case 0x1c114406: return unpack_can_0x1c114406_BHZ3_LEISTUNG_HK1(o, data, dlc, time_stamp);
+	case 0x1c114409: return unpack_can_0x1c114409_BHZ3_GESAMTLEISTUNG_HK1_HEUTE(o, data, dlc, time_stamp);
+	case 0x1c11440a: return unpack_can_0x1c11440a_BHZ3_GESAMTLEISTUNG_HK1_GESTERN(o, data, dlc, time_stamp);
+	case 0x1c11440b: return unpack_can_0x1c11440b_BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE(o, data, dlc, time_stamp);
+	case 0x1c11440c: return unpack_can_0x1c11440c_BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE(o, data, dlc, time_stamp);
+	case 0x1c114c06: return unpack_can_0x1c114c06_BHZ3_LEISTUNG_WW(o, data, dlc, time_stamp);
+	case 0x1c114c09: return unpack_can_0x1c114c09_BHZ3_GESAMTLEISTUNG_WW_HEUTE(o, data, dlc, time_stamp);
+	case 0x1c114c0a: return unpack_can_0x1c114c0a_BHZ3_GESAMTLEISTUNG_WW_GESTERN(o, data, dlc, time_stamp);
+	case 0x1c114c0b: return unpack_can_0x1c114c0b_BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE(o, data, dlc, time_stamp);
+	case 0x1c114c0c: return unpack_can_0x1c114c0c_BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE(o, data, dlc, time_stamp);
+	case 0x1c115006: return unpack_can_0x1c115006_BHZ3_LEISTUNG_SOLAR(o, data, dlc, time_stamp);
+	case 0x1c115009: return unpack_can_0x1c115009_BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE(o, data, dlc, time_stamp);
+	case 0x1c11500a: return unpack_can_0x1c11500a_BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN(o, data, dlc, time_stamp);
+	case 0x1c11500b: return unpack_can_0x1c11500b_BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE(o, data, dlc, time_stamp);
+	case 0x1c11500c: return unpack_can_0x1c11500c_BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE(o, data, dlc, time_stamp);
 	default: break; 
 	}
 	return -1; 
@@ -85,6 +3617,72 @@ int pack_message(can_obj_bhz3_h_t *o, const unsigned long id, uint64_t *data) {
 	assert(id < (1ul << 29)); /* 29-bit CAN ID is largest possible */
 	switch (id) {
 	case 0x1c104000: return pack_can_0x1c104000_BHZ3_VOLUMENSTROM_SOLAR(o, data);
+	case 0x1c104001: return pack_can_0x1c104001_BHZ3_VOLUMENSTROM_WW(o, data);
+	case 0x1c104003: return pack_can_0x1c104003_BHZ3_VOLUMENSTROM_FESTBRENNOFEN(o, data);
+	case 0x1c104004: return pack_can_0x1c104004_BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG(o, data);
+	case 0x1c104005: return pack_can_0x1c104005_BHZ3_DRUCK_PUFFER(o, data);
+	case 0x1c104006: return pack_can_0x1c104006_BHZ3_VOLUMENSTROM_HK1(o, data);
+	case 0x1c104009: return pack_can_0x1c104009_BHZ3_TEMPERATUR_HK1_VL(o, data);
+	case 0x1c10400a: return pack_can_0x1c10400a_BHZ3_TEMPERATUR_HK2_VL(o, data);
+	case 0x1c10400b: return pack_can_0x1c10400b_BHZ3_TEMPERATUR_PUFFER_OBEN(o, data);
+	case 0x1c10400c: return pack_can_0x1c10400c_BHZ3_TEMPERATUR_PUFFER_MITTE(o, data);
+	case 0x1c10400d: return pack_can_0x1c10400d_BHZ3_TEMPERATUR_PUFFER_UNTEN(o, data);
+	case 0x1c10400e: return pack_can_0x1c10400e_BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER(o, data);
+	case 0x1c10400f: return pack_can_0x1c10400f_BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR(o, data);
+	case 0x1c104010: return pack_can_0x1c104010_BHZ3_TEMPERATUR_SOLAR_RL(o, data);
+	case 0x1c104012: return pack_can_0x1c104012_BHZ3_TEMPERATUR_WW_ZIRKULATION(o, data);
+	case 0x1c104013: return pack_can_0x1c104013_BHZ3_TEMPERATUR_WETTER(o, data);
+	case 0x1c104014: return pack_can_0x1c104014_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR(o, data);
+	case 0x1c104015: return pack_can_0x1c104015_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL(o, data);
+	case 0x1c104016: return pack_can_0x1c104016_BHZ3_TEMPERATUR_SOLAR_SEK_RL(o, data);
+	case 0x1c104019: return pack_can_0x1c104019_BHZ3_TEMPERATUR_SOLAR_PRIM_VL(o, data);
+	case 0x1c10401b: return pack_can_0x1c10401b_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL(o, data);
+	case 0x1c10401c: return pack_can_0x1c10401c_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL(o, data);
+	case 0x1c10401e: return pack_can_0x1c10401e_BHZ3_TEMPERATUR_HK1_RL(o, data);
+	case 0x1c10401f: return pack_can_0x1c10401f_BHZ3_TEMPERATUR_HK2_RL(o, data);
+	case 0x1c104020: return pack_can_0x1c104020_BHZ3_TEMPERATUR_WW_PRIM_VL(o, data);
+	case 0x1c104021: return pack_can_0x1c104021_BHZ3_TEMPERATUR_WW_PRIM_RL(o, data);
+	case 0x1c104022: return pack_can_0x1c104022_BHZ3_TEMPERATUR_WW_IST(o, data);
+	case 0x1c106002: return pack_can_0x1c106002_BHZ3_UNKLAHR_WW(o, data);
+	case 0x1c106008: return pack_can_0x1c106008_BHZ3_STATUS_HK1_EIN_AUS(o, data);
+	case 0x1c10600a: return pack_can_0x1c10600a_BHZ3_STATUS_HK1_AUS_EIN(o, data);
+	case 0x1c106013: return pack_can_0x1c106013_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV(o, data);
+	case 0x1c10801a: return pack_can_0x1c10801a_BHZ3_LEISTUNG_FESTBRENNOFEN(o, data);
+	case 0x1c10801d: return pack_can_0x1c10801d_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE(o, data);
+	case 0x1c10801e: return pack_can_0x1c10801e_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN(o, data);
+	case 0x1c10801f: return pack_can_0x1c10801f_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE(o, data);
+	case 0x1c108020: return pack_can_0x1c108020_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE(o, data);
+	case 0x1c10a411: return pack_can_0x1c10a411_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER(o, data);
+	case 0x1c10a413: return pack_can_0x1c10a413_BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS(o, data);
+	case 0x1c10c019: return pack_can_0x1c10c019_BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM(o, data);
+	case 0x1c10c037: return pack_can_0x1c10c037_BHZ3_TEMPERATUR_WW_SOLL(o, data);
+	case 0x1c112006: return pack_can_0x1c112006_BHZ3_VOLUMENSTROM_WW_SPEICHER(o, data);
+	case 0x1c11200e: return pack_can_0x1c11200e_BHZ3_STATUS_HK1_ABSENKART(o, data);
+	case 0x1c112013: return pack_can_0x1c112013_BHZ3_STATUS_HK1_SOMMERBETRIEB(o, data);
+	case 0x1c11201e: return pack_can_0x1c11201e_BHZ3_STATUS_HK1_DAUERBETRIEB(o, data);
+	case 0x1c11201f: return pack_can_0x1c11201f_BHZ3_STATUS_HK1_ABWESENHEITSZEIT(o, data);
+	case 0x1c112022: return pack_can_0x1c112022_BHZ3_STATUS_HK1_PROGRAMM(o, data);
+	case 0x1c112024: return pack_can_0x1c112024_BHZ3_STATUS_HK1_WAERMER_KAELTER(o, data);
+	case 0x1c114006: return pack_can_0x1c114006_BHZ3_LEISTUNG_ZUSATZHEIZUNG(o, data);
+	case 0x1c114009: return pack_can_0x1c114009_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE(o, data);
+	case 0x1c11400a: return pack_can_0x1c11400a_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN(o, data);
+	case 0x1c11400b: return pack_can_0x1c11400b_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE(o, data);
+	case 0x1c11400c: return pack_can_0x1c11400c_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE(o, data);
+	case 0x1c114406: return pack_can_0x1c114406_BHZ3_LEISTUNG_HK1(o, data);
+	case 0x1c114409: return pack_can_0x1c114409_BHZ3_GESAMTLEISTUNG_HK1_HEUTE(o, data);
+	case 0x1c11440a: return pack_can_0x1c11440a_BHZ3_GESAMTLEISTUNG_HK1_GESTERN(o, data);
+	case 0x1c11440b: return pack_can_0x1c11440b_BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE(o, data);
+	case 0x1c11440c: return pack_can_0x1c11440c_BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE(o, data);
+	case 0x1c114c06: return pack_can_0x1c114c06_BHZ3_LEISTUNG_WW(o, data);
+	case 0x1c114c09: return pack_can_0x1c114c09_BHZ3_GESAMTLEISTUNG_WW_HEUTE(o, data);
+	case 0x1c114c0a: return pack_can_0x1c114c0a_BHZ3_GESAMTLEISTUNG_WW_GESTERN(o, data);
+	case 0x1c114c0b: return pack_can_0x1c114c0b_BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE(o, data);
+	case 0x1c114c0c: return pack_can_0x1c114c0c_BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE(o, data);
+	case 0x1c115006: return pack_can_0x1c115006_BHZ3_LEISTUNG_SOLAR(o, data);
+	case 0x1c115009: return pack_can_0x1c115009_BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE(o, data);
+	case 0x1c11500a: return pack_can_0x1c11500a_BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN(o, data);
+	case 0x1c11500b: return pack_can_0x1c11500b_BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE(o, data);
+	case 0x1c11500c: return pack_can_0x1c11500c_BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE(o, data);
 	default: break; 
 	}
 	return -1; 
@@ -96,6 +3694,72 @@ int print_message(const can_obj_bhz3_h_t *o, const unsigned long id, FILE *outpu
 	assert(output);
 	switch (id) {
 	case 0x1c104000: return print_can_0x1c104000_BHZ3_VOLUMENSTROM_SOLAR(o, output);
+	case 0x1c104001: return print_can_0x1c104001_BHZ3_VOLUMENSTROM_WW(o, output);
+	case 0x1c104003: return print_can_0x1c104003_BHZ3_VOLUMENSTROM_FESTBRENNOFEN(o, output);
+	case 0x1c104004: return print_can_0x1c104004_BHZ3_VOLUMENSTROM_ZUSATZHEIZUNG(o, output);
+	case 0x1c104005: return print_can_0x1c104005_BHZ3_DRUCK_PUFFER(o, output);
+	case 0x1c104006: return print_can_0x1c104006_BHZ3_VOLUMENSTROM_HK1(o, output);
+	case 0x1c104009: return print_can_0x1c104009_BHZ3_TEMPERATUR_HK1_VL(o, output);
+	case 0x1c10400a: return print_can_0x1c10400a_BHZ3_TEMPERATUR_HK2_VL(o, output);
+	case 0x1c10400b: return print_can_0x1c10400b_BHZ3_TEMPERATUR_PUFFER_OBEN(o, output);
+	case 0x1c10400c: return print_can_0x1c10400c_BHZ3_TEMPERATUR_PUFFER_MITTE(o, output);
+	case 0x1c10400d: return print_can_0x1c10400d_BHZ3_TEMPERATUR_PUFFER_UNTEN(o, output);
+	case 0x1c10400e: return print_can_0x1c10400e_BHZ3_TEMPERATUR_SOLAR_EINTRAG_PUFFER(o, output);
+	case 0x1c10400f: return print_can_0x1c10400f_BHZ3_TEMPERATUR_SOLAR_KOLLEKTORTEMPERATUR(o, output);
+	case 0x1c104010: return print_can_0x1c104010_BHZ3_TEMPERATUR_SOLAR_RL(o, output);
+	case 0x1c104012: return print_can_0x1c104012_BHZ3_TEMPERATUR_WW_ZIRKULATION(o, output);
+	case 0x1c104013: return print_can_0x1c104013_BHZ3_TEMPERATUR_WETTER(o, output);
+	case 0x1c104014: return print_can_0x1c104014_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSELTEMPERATUR(o, output);
+	case 0x1c104015: return print_can_0x1c104015_BHZ3_TEMPERATUR_FESTBRENNOFEN_KESSEL_RL(o, output);
+	case 0x1c104016: return print_can_0x1c104016_BHZ3_TEMPERATUR_SOLAR_SEK_RL(o, output);
+	case 0x1c104019: return print_can_0x1c104019_BHZ3_TEMPERATUR_SOLAR_PRIM_VL(o, output);
+	case 0x1c10401b: return print_can_0x1c10401b_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_VL(o, output);
+	case 0x1c10401c: return print_can_0x1c10401c_BHZ3_TEMPERATUR_ZUSATZHEIZUNG_RL(o, output);
+	case 0x1c10401e: return print_can_0x1c10401e_BHZ3_TEMPERATUR_HK1_RL(o, output);
+	case 0x1c10401f: return print_can_0x1c10401f_BHZ3_TEMPERATUR_HK2_RL(o, output);
+	case 0x1c104020: return print_can_0x1c104020_BHZ3_TEMPERATUR_WW_PRIM_VL(o, output);
+	case 0x1c104021: return print_can_0x1c104021_BHZ3_TEMPERATUR_WW_PRIM_RL(o, output);
+	case 0x1c104022: return print_can_0x1c104022_BHZ3_TEMPERATUR_WW_IST(o, output);
+	case 0x1c106002: return print_can_0x1c106002_BHZ3_UNKLAHR_WW(o, output);
+	case 0x1c106008: return print_can_0x1c106008_BHZ3_STATUS_HK1_EIN_AUS(o, output);
+	case 0x1c10600a: return print_can_0x1c10600a_BHZ3_STATUS_HK1_AUS_EIN(o, output);
+	case 0x1c106013: return print_can_0x1c106013_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIV(o, output);
+	case 0x1c10801a: return print_can_0x1c10801a_BHZ3_LEISTUNG_FESTBRENNOFEN(o, output);
+	case 0x1c10801d: return print_can_0x1c10801d_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_HEUTE(o, output);
+	case 0x1c10801e: return print_can_0x1c10801e_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_GESTERN(o, output);
+	case 0x1c10801f: return print_can_0x1c10801f_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_5_TAGE_OHNE_HEUTE(o, output);
+	case 0x1c108020: return print_can_0x1c108020_BHZ3_GESAMTLEISTUNG_FESTBRENNOFEN_30_TAGE_OHNE_HEUTE(o, output);
+	case 0x1c10a411: return print_can_0x1c10a411_BHZ3_STATUS_ZUSATZHEIZUNG_AKTIVIERT_FUER(o, output);
+	case 0x1c10a413: return print_can_0x1c10a413_BHZ3_STATUS_ZUSATZHEIZUNG_EIN_AUS(o, output);
+	case 0x1c10c019: return print_can_0x1c10c019_BHZ3_STATUS_WW_ZIRKULATIONSPROGRAMM(o, output);
+	case 0x1c10c037: return print_can_0x1c10c037_BHZ3_TEMPERATUR_WW_SOLL(o, output);
+	case 0x1c112006: return print_can_0x1c112006_BHZ3_VOLUMENSTROM_WW_SPEICHER(o, output);
+	case 0x1c11200e: return print_can_0x1c11200e_BHZ3_STATUS_HK1_ABSENKART(o, output);
+	case 0x1c112013: return print_can_0x1c112013_BHZ3_STATUS_HK1_SOMMERBETRIEB(o, output);
+	case 0x1c11201e: return print_can_0x1c11201e_BHZ3_STATUS_HK1_DAUERBETRIEB(o, output);
+	case 0x1c11201f: return print_can_0x1c11201f_BHZ3_STATUS_HK1_ABWESENHEITSZEIT(o, output);
+	case 0x1c112022: return print_can_0x1c112022_BHZ3_STATUS_HK1_PROGRAMM(o, output);
+	case 0x1c112024: return print_can_0x1c112024_BHZ3_STATUS_HK1_WAERMER_KAELTER(o, output);
+	case 0x1c114006: return print_can_0x1c114006_BHZ3_LEISTUNG_ZUSATZHEIZUNG(o, output);
+	case 0x1c114009: return print_can_0x1c114009_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_HEUTE(o, output);
+	case 0x1c11400a: return print_can_0x1c11400a_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_GESTERN(o, output);
+	case 0x1c11400b: return print_can_0x1c11400b_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_5_TAGE_OHNE_HEUTE(o, output);
+	case 0x1c11400c: return print_can_0x1c11400c_BHZ3_GESAMTLEISTUNG_ZUSATZHEIZUNG_LETZTE_4_WOCHEN_OHNE_HEUTE(o, output);
+	case 0x1c114406: return print_can_0x1c114406_BHZ3_LEISTUNG_HK1(o, output);
+	case 0x1c114409: return print_can_0x1c114409_BHZ3_GESAMTLEISTUNG_HK1_HEUTE(o, output);
+	case 0x1c11440a: return print_can_0x1c11440a_BHZ3_GESAMTLEISTUNG_HK1_GESTERN(o, output);
+	case 0x1c11440b: return print_can_0x1c11440b_BHZ3_GESAMTLEISTUNG_HK1_5_TAGE_OHNE_HEUTE(o, output);
+	case 0x1c11440c: return print_can_0x1c11440c_BHZ3_GESAMTLEISTUNG_HK1_LETZTE_4_WOCHEN_OHNE_HEUTE(o, output);
+	case 0x1c114c06: return print_can_0x1c114c06_BHZ3_LEISTUNG_WW(o, output);
+	case 0x1c114c09: return print_can_0x1c114c09_BHZ3_GESAMTLEISTUNG_WW_HEUTE(o, output);
+	case 0x1c114c0a: return print_can_0x1c114c0a_BHZ3_GESAMTLEISTUNG_WW_GESTERN(o, output);
+	case 0x1c114c0b: return print_can_0x1c114c0b_BHZ3_GESAMTLEISTUNG_WW_5_TAGE_OHNE_HEUTE(o, output);
+	case 0x1c114c0c: return print_can_0x1c114c0c_BHZ3_GESAMTLEISTUNG_WW_LETZTE_4_WOCHEN_OHNE_HEUTE(o, output);
+	case 0x1c115006: return print_can_0x1c115006_BHZ3_LEISTUNG_SOLAR(o, output);
+	case 0x1c115009: return print_can_0x1c115009_BHZ3_GESAMTLEISTUNG_SOLAR_HEUTE(o, output);
+	case 0x1c11500a: return print_can_0x1c11500a_BHZ3_GESAMTLEISTUNG_SOLAR_GESTERN(o, output);
+	case 0x1c11500b: return print_can_0x1c11500b_BHZ3_GESAMTLEISTUNG_SOLAR_5_TAGE_OHNE_HEUTE(o, output);
+	case 0x1c11500c: return print_can_0x1c11500c_BHZ3_GESAMTLEISTUNG_SOLAR_LETZTE_4_WOCHEN_OHNE_HEUTE(o, output);
 	default: break; 
 	}
 	return -1; 
